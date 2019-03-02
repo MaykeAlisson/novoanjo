@@ -1,0 +1,24 @@
+{
+  "name": "novoanjo",
+  "version": "1.0.0",
+  "description": "Sistema Solidario",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaykeAlisson/novoanjo.git"
+  },
+  "author": "Mayke Alisson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaykeAlisson/novoanjo/issues"
+  },
+  "homepage": "https://github.com/MaykeAlisson/novoanjo#readme",
+  "dependencies": {
+    "consign": "^0.1.6",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}

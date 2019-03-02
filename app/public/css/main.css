@@ -1,0 +1,576 @@
+/*@ autor : Mayke Alisson <maykealison@gmail.com>
+version: 0.1
+*/
+
+/* =========================================Layout======================================== */
+
+/* --Barra de navegação-- */
+#barraNav {
+  width: 100%;
+  height: 100px;
+  padding: 20px 0;
+  margin-bottom: 0%;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 999;
+  background-color: #fff;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  background-color: #fff;
+}
+
+.img-logo {
+  margin-top: -15px;
+  height: 60px;
+  width: 220px;
+  display: block;
+  background: url('/img/logo.png') no-repeat;
+  background-size: contain;
+  color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: black;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: #00BFFF;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: black;
+}
+
+#btn-nav:hover {
+  background-color: gray;
+}
+
+#login-dp {
+  width: 230px;
+  height: 220px;
+}
+
+.texto_logar {
+  margin-left: 40%;
+}
+
+.form {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+#btb_navLog {
+  width: 180px;
+  margin-left: 23px;
+}
+
+/* ======================= INDEX =====================*/
+/* CAPA */
+
+.capa {
+  width: 100%;
+  max-width: 1319px;
+  height: 100%;
+  background-image: url('/img/capa_g.png');
+  background-size: cover;
+  position: relative;
+  display: table;
+}
+
+
+.texto_capa {
+  text-align: center;
+  color: black;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* SECAO RESUMO */
+.SobreQuem hr {
+  margin: 20px auto;
+  border: none;
+  width: 150px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #1b9897;
+}
+
+.SobreQuem {
+  background-color: #f7f7f7;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px 0;
+}
+
+.squem-card {
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .2);
+  transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1)
+}
+
+.limit {
+  padding: 20px 30px
+}
+
+.SobreQuem .squem-cat {
+  margin: 0;
+  font: 1.4em/1 Montserrat-Bold, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+  text-decoration: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #1b9897;
+  overflow: hidden
+}
+
+.SobreQuem .squem-title {
+  margin: 0;
+  font: 3em/1.36 Georgia, serif;
+  overflow: hidden;
+  color: #2c3239
+}
+
+.SobreQuem .squem-card:hover {
+  box-shadow: 0 12px 18px rgba(0, 0, 0, .1), 0 10px 14px rgba(0, 0, 0, .05)
+}
+
+.SobreQuem .squem-desc {
+  font-family: Montserrat-Regular, Helvetica, Arial, sans-serif;
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  max-height: 90.24px;
+  font-size: 16px;
+  line-height: 1.88;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #555
+}
+
+.SobreQuem .squem-cta {
+  font: 1.6em/1.88 Montserrat-Bold, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+  color: #1b9897;
+  text-decoration: none
+}
+
+.SobreQuem hr {
+  margin-left: 0
+}
+
+/* Secao Apoie */
+.apoie {
+  background-color: #f7f7f7;
+  margin-bottom: 20px;
+}
+
+.title-apoie {
+  margin: 10px 15%;
+  color: #555;
+}
+
+.title-social {
+  margin: 10px 0%;
+  color: #555;
+}
+
+.btn_donate {
+  box-sizing: border-box;
+  font: 18px/30px Montserrat-Medium, Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #fff;
+  background-color: #a04098 !important;
+  border: 0;
+  margin-left: -50px;
+  border-radius: 3px;
+}
+
+.social-insta {
+  width: 23px;
+  margin-top: 5px;
+  background-size: contain;
+  color: transparent;
+}
+
+.social-face {
+  width: 13px;
+  margin-top: 5px;
+  background-size: contain;
+  color: transparent;
+}
+
+/* Servicos */
+.servicos {
+  margin-top: 80px;
+}
+
+.servicos hr {
+  margin-left: 0;
+  border: none;
+  width: 150px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #1b9897;
+}
+
+.title-servicos {
+  text-align: left;
+  margin-top: 0;
+  color: #2c3239;
+  font: 3em/1.2 Georgia, serif;
+  letter-spacing: .5px;
+}
+
+.desc-servicos {
+  margin: 0;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.servicos-mais {
+  font: 1.6em/1.88 Montserrat-Bold, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+  color: #1b9897;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.card {
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: #f7f7f7;
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+.card-img {
+  width: 180px;
+  height: 100px;
+}
+
+.title-card {
+  color: #555;
+}
+
+/* Eventos */
+.evento {
+  background-color: #f7f7f7;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+.img_evento {
+  padding-left: 0%;
+}
+
+.evento hr {
+  margin-left: 0;
+  border: none;
+  width: 150px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #1b9897;
+}
+
+.img-evento {
+  width: 100%;
+}
+
+.title-evento {
+  text-align: left;
+  margin-top: 0;
+  color: #2c3239;
+  font: 3em/1.2 Georgia, serif;
+  letter-spacing: .5px;
+}
+
+.title-evento::before {
+  display: inline-block;
+  margin-right: 15px;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: #1b9897;
+  content: "";
+}
+
+.desc_evento {
+  margin: 0;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Inspiração */
+.title-inspiracao {
+  text-align: left;
+  margin-top: 0;
+  color: #2c3239;
+  font: 3em/1.2 Georgia, serif;
+  letter-spacing: .5px;
+}
+
+.inspiracao hr {
+  margin-left: 0;
+  border: none;
+  width: 150px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #1b9897;
+}
+
+.desc_inspiracao {
+  margin: 0;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.depoimento {
+  margin-bottom: 20px;
+  background-color: #f7f7f7;
+  border-left: 6px solid #F0E68C;
+}
+
+.dep_msg {
+  margin-left: 5px;
+  font-family: Montserrat-Regular, Helvetica, Arial, sans-serif;
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  max-height: 90.24px;
+  font-size: 16px;
+  line-height: 1.50;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #555;
+}
+
+.dep_author {
+  margin-left: 5px;
+}
+
+/* Rodape */
+.rodape {
+  background-color: #2c3239;
+  padding: 70px 0;
+}
+
+.sobre_rod {
+  padding-left: 5%;
+}
+
+.res_rod {
+  text-align: left;
+  font: 15px/1.57 Montserrat-Regular, Helvetica, Arial, sans-serif;
+  color: #DCDCDC;
+  max-width: 450px;
+}
+
+.footer h4 {
+  color: #DCDCDC;
+  margin: 0 0 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav_footer ul {
+  padding-left: 0;
+}
+
+.footer a {
+  font-size: 12px;
+  line-height: 15px;
+  color: #DCDCDC;
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  color: #1b9897;
+}
+
+
+
+
+/* =======================TELA CADASTRO=====================*/
+
+
+/* =======================TELA EVENTO=====================*/
+
+/* =======================TELA EVENTOS=====================*/
+
+/* =======================TELA QUEM SOMOS=====================*/
+
+/* =======================TELA DASHBOARD=====================*/
+
+
+
+/* ======================================Tipografia==================================== */
+.texto_capa h1 {
+  font-family: 'Courier New', Courier, monospace;
+  font-style: oblique;
+  font-size: 50px;
+  letter-spacing: -0.05em;
+  word-spacing: -2px;
+}
+
+.texto_capa h3 {
+  font-size: 25px;
+  font-style: italic;
+}
+
+.texto_logar {
+  font-size: 20px;
+}
+
+.title-apoie {
+  font: 18px/1.2 Montserrat-Medium, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+}
+
+.title-social {
+  font: 18px/1.1 Montserrat-Medium, Helvetica, Arial, sans-serif;
+}
+
+.title-card {
+  font: 18px/1.2 Montserrat-Medium, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+}
+
+.desc-servicos {
+  font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+}
+
+.desc_evento {
+  font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+}
+
+.desc_inspiracao {
+  font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+}
+
+.footer h4 {
+  font: 1.3em/1.1 Montserrat-Medium, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+}
+
+.footer a {
+  font: 13.5px/32px Montserrat-Regular, Helvetica, Arial, sans-serif;
+}
+
+
+/* ======================================Media-Queries==================================== */
+@media only screen and (max-width: 600px) {
+  .capa {
+    background-image: url('/img/capa_p.png');
+  }
+  .texto_capa h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    font-size: 30px;
+    letter-spacing: -0.05em;
+    word-spacing: -2px;
+  }
+
+  .texto_capa h3 {
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  .squem-card {
+    margin-bottom: 30px
+  }
+
+  .squem-card:last-child {
+    margin-bottom: 0
+  }
+
+  .img_quem{
+    width: 100%;
+  }
+
+  .img_exem{
+    width: 100%;
+  }
+
+  /* .title-apoie {
+    margin-left: -10%;
+    margin-top: 10px;
+  }
+
+  .btn_donate {
+    float: right;
+    margin-top: -30px;
+    font: 15px/25px Montserrat-Medium, Helvetica, Arial, sans-serif;
+  }
+
+  .title-social {
+    margin: 20px -15%;
+    color: #555;
+  } */
+
+}
+
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {
+  .capa{
+    min-height: 535px;
+  }
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: end;
+    flex-direction: row;
+    margin: 0;
+    bottom: 0;
+    padding: 0px 8px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .squem-card {
+    box-sizing: border-box;
+    width: calc(50% - 210px);
+    height: 550px;
+    margin-right: 70px;
+    margin-bottom: 10px
+  }
+
+  .btn_donate {
+  min-width: 255px;
+  }
+}
+
+/*
+@media only screen and (min-width: 769px) and (max-width: 994px) {
+  .capa {
+    width: 100%;
+    max-width: 1319px;
+    max-height: 300px;
+    background-image: url('/img/capa_c.png');
+    background-size: cover;
+    position: relative;
+    display: table;
+  }
+} */

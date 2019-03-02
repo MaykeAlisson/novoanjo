@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
+  <!-- CSS -->
+  <link href="/css/main.css" rel="stylesheet">
+
+  <title>Novo Anjo</title>
+</head>
+
+<body>
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-default" id="barraNav">
+    <div class="container">
+      <!-- Header -->
+      <div class="navbar-header">
+        <!-- Botao toggle -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao"
+          id="btn-nav">
+          <span class="sr-only">alternar navegação</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="/" class="navbar-brand">
+          <span class="img-logo">Novo Anjo</span>
+        </a>
+      </div>
+      <!-- Navbar -->
+      <div class="collapse navbar-collapse" id="barra-navegacao">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/">Quem Somos</a></li>
+          <li><a href="">Eventos</a></li>
+          <li><a href="">Preciso de ajuda</a></li>
+          <li><a href="">Contato</a></li>
+          <li><a href="">Participar</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Entrar
+              <span class="caret"></span></a>
+            <ul id="login-dp" class="dropdown-menu">
+              <li>
+                <div class="row">
+                  <div class="col-md-12">
+                    <span class="texto_logar">Logar</span>
+                    <br /><br />
+                    <form class="form" role="form" method="post" action="validar_acesso.php"
+                      accept-charset="UTF-8" id="login-nav">
+                      <div class="form-group">
+                        <label class="sr-only">Email</label>
+                        <input type="email" class="form-control" name="email" id="formLogarEmail"
+                          placeholder="Digite seu email" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="sr-only">Senha</label>
+                        <input type="password" class="form-control" name="senha" id="formLogarSenha"
+                          placeholder="Senha" required>
+                        <div class="help-block text-right"><a href="">Esqueceu
+                            a senha ?</a></div>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block" id="btb_navLog">Entrar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div><!-- /container -->
+  </nav><!-- /Barra de navegação -->
+  <!-- Capa -->
+  <div class="capa">
+    <div class="texto_capa">
+      <h1>Sonho com o dia em que todos se levantarão e compreenderão que foram
+        feitos para viverem como irmãos.</h1>
+      <h3>- Nelson Mandela</h3>
+    </div>
+  </div><!-- /Capa -->
+  <!-- Secao Resumo -->
+  <section class="SobreQuem">
+    <div class="content">
+      <div class="squem-card">
+        <a href="" class="squem-thumb">
+          <img class="img_quem" src="/img/juntos_G.jpg"
+            alt="">
+        </a>
+        <div class="limit">
+          <p class="squem-cat">Nossa causa</p>
+          <h2 class="squem-title">Quem somos</h2>
+          <hr>
+          <p class="squem-desc">Juntos multiplicamos o poder da solidariedade
+            ajudando quem mais precisa.</p>
+          <a href="" class="squem-cta">Conheça
+            o nosso trabalho »</a>
+        </div>
+      </div>
+      <div class="squem-card">
+        <a href="" class="squem-thumb">
+          <img class="img_exem" src="/img/exemplos_G.png"
+            alt="">
+        </a>
+        <div class="limit">
+          <p class="squem-cat">Exemplos multiplicadores</p>
+          <h2 class="squem-title">Quem apoiamos</h2>
+          <hr>
+          <p class="squem-desc">Apoiamos pessoas carentes para
+            formar uma nova geração de exemplos para o
+            Brasil.</p>
+          <a href="" class="squem-cta">Conheça
+            nossa rede »</a>
+        </div>
+      </div>
+    </div>
+  </section><!-- /Secao Resumo -->
+  <!-- Apoie -->
+  <div class="apoie col-md-12">
+    <div class="col-md-3">
+      <h2 class="title-apoie">Apoie nossa causa</h2>
+    </div>
+    <div class="donate col-md-3">
+      <a href="" class="btn btn_donate">Faça sua doação</a>
+    </div>
+    <div class="col-md-3 div_social">
+      <h2 class="title-social">Siga nossas redes sociais</h2>
+    </div>
+    <div class="col-md-3">
+      <a href="">
+        <img src="/img/icone-insta.svg" class="social-insta" alt="Instagran">
+      </a>
+      <a href="">
+        <img src="/img/icone-fb.svg" class="social-face" alt="Facebook">
+      </a>
+    </div>
+  </div><!-- /Apoie -->
+  <!-- Serviços -->
+  <div class="container servicos">
+    <div class="col-md-4">
+      <header>
+        <h2 class="title-servicos">Serviços</h2>
+        <hr>
+        <p class="desc-servicos">Oferecemos alguns serviços que podem
+          ajudar pessoas carentes.</p>
+      </header>
+      <a href="" class="servicos-mais">Conheça mais »</a>
+    </div>
+    <div class="col-md-8 servicos-card">
+      <div class="card">
+        <img class="card-img" src="/img/agasalho.png" alt="">
+        <h3 class="title-card">Agasalhos</h3>
+      </div>
+      <div class="card">
+        <img class="card-img" src="/img/alimento.png" alt="">
+        <h3 class="title-card">Alimentos</h3>
+      </div>
+      <div class="card">
+        <img class="card-img" src="/img/calcados.jpg" alt="">
+        <h3 class="title-card">Calçados</h3>
+      </div>
+      <div class="card">
+        <img class="card-img" src="/img/roupas.jpg" alt="">
+        <h3 class="title-card">Roupas</h3>
+      </div>
+      <div class="card">
+        <img class="card-img" src="/img/tempo.jpg" alt="">
+        <h3 class="title-card">Tempo</h3>
+      </div>
+      <div class="card">
+        <img class="card-img" src="/img/saude.png" alt="">
+        <h3 class="title-card">Medicos</h3>
+      </div>
+      <div class="card">
+        <img class="card-img" src="/img/advogado.png" alt="">
+        <h3 class="title-card">Advogados</h3>
+      </div>
+      <div class="card">
+        <img class="card-img" src="/img/diva.png" alt="">
+        <h3 class="title-card">Psicologos</h3>
+      </div>
+      <div class="card">
+        <img class="card-img" src="/img/informatica.png" alt="">
+        <h3 class="title-card">Informatica</h3>
+      </div>
+    </div>
+  </div><!-- /Serviços -->
+  <!-- Eventos -->
+  <section class="evento col-md-12">
+    <div class="img_evento col-md-6">
+      <picture>
+        <img class="img-evento" src="/img/evento.jpg" alt="Eventos">
+      </picture>
+    </div>
+    <div class="res_evento col-md-6">
+      <h3 class="title-evento">Eventos</h3>
+      <hr>
+      <p class="desc_evento">Contamos com um catalogo de eventos beneficentes
+        atualizados periodicamente. </p>
+    </div>
+  </section><!-- /Eventos -->
+  <!-- Inspiração -->
+  <section class="inspiracao container">
+    <div class="col-md-6">
+      <h3 class="title-inspiracao">Inspiração</h3>
+      <hr>
+      <p class="desc_inspiracao">Acreditamos que um simples exemplo transforma
+        a jornada de uma pessoa.</p>
+    </div>
+    <div class="dep_inspiracao col-md-6">
+      <div class="depoimento">
+        <p class="dep_msg">Eu sei que o meu trabalho é uma gota no oceano, mas sem ele o oceano
+          seria menor.</p>
+        <strong class="dep_author">Madre Teresa de Calcutá</strong>
+      </div>
+      <div class="depoimento">
+        <p class="dep_msg">Faça o que puder, com o que tem, onde estiver.</p>
+        <strong class="dep_author">Roosevelt , Theodore</strong>
+      </div>
+      <div class="depoimento">
+        <p class="dep_msg">O nosso dever é ser útil não de acordo com os nossos desejos, mas de
+          acordo com as nossas forças.</p>
+        <strong class="dep_author">Amiel , Henri</strong>
+      </div>
+      <div class="depoimento">
+        <p class="dep_msg">A impotência de hoje paralisa as nossas mãos. Mas saibamos tornar a
+          nossa angústia útil à geração que nos vai substituir. Seremos a pedra
+          com a qual os nossos filhos farão um pilar da casa futura.</p>
+        <strong class="dep_author">Idris , Suhail</strong>
+      </div>
+    </div>
+  </section>
+  <!-- Rodape -->
+  <footer class="footer">
+    <div class="rodape container col-md-12">
+      <section>
+        <div class="col-md-6 sobre_rod">
+          <img src="/img/logo_b.png" alt="Novo Anjo">
+          <p class="res_rod">Somos uma organização sem fins lucrativos com a missão de multiplicar a solidariedade.
+            Criada em 2019, promovemos um ambiente de solidariedade que estimula o crescimento da generosidade, compaixão
+            e o amor ao próximo.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-4">
+            <h4>Mapa do Site</h4>
+            <div class="navbar nav_footer">
+              <ul>
+                <li><a href="">Eventos</a></li>
+                <li><a href="">Inspirações</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4>Recursos</h4>
+            <div class="navbar nav_footer">
+              <ul>
+                <li><a href="">Serviços</a></li>
+                <li><a href="">Livros</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4>Novo Anjo</h4>
+            <div class="navbar nav_footer">
+              <ul>
+                <li><a href="">Quem Somos</a></li>
+                <li><a href="">Doe para a nossa causa</a></li>
+                <li><a href="">Fale com a gente</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </footer><!-- /Rodape -->
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src='/js/main.js'></script>
+</body>
+
+</html>
