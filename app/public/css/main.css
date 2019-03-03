@@ -191,6 +191,7 @@ version: 0.1
 
 .social-insta {
   width: 23px;
+  margin-right: 10px;
   margin-top: 5px;
   background-size: contain;
   color: transparent;
@@ -507,9 +508,12 @@ a:link {
     width: 100%;
   }
 
-  /* .title-apoie {
-    margin-left: -10%;
-    margin-top: 10px;
+  .apoie{
+    padding-left: 0%;
+  }
+  .title-apoie {
+    margin: 0px;
+    margin-left: -10px;
   }
 
   .btn_donate {
@@ -517,18 +521,70 @@ a:link {
     margin-top: -30px;
     font: 15px/25px Montserrat-Medium, Helvetica, Arial, sans-serif;
   }
-
+  .div_social{
+    margin-top: 30px;
+  }
   .title-social {
-    margin: 20px -15%;
-    color: #555;
-  } */
+    margin: 0px;
+    margin-left: -13px;
+  }
+  .div_icon{
+    float: right;
+    margin-top: -30px;
+  }
+
+  .card-img {
+    width: 130px;
+    height: 80px;
+  }
 
 }
 
 
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+  .img_quem{
+    width: 100%;
+    max-width: 434px;
+    max-height: 263px;
+  }
+
+  .img_exem{
+    width: 100%;
+    max-width: 434px;
+    max-height: 263px;
+  }
+
+
+}
 
 @media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+  .apoie{
+    padding-left: 0%;
+  }
+  .title-apoie {
+    margin: 0px;
+    margin-left: -10px;
+  }
+
+  .btn_donate {
+    float: right;
+    margin-top: -30px;
+    font: 15px/25px Montserrat-Medium, Helvetica, Arial, sans-serif;
+  }
+  .div_social{
+    margin-top: 30px;
+  }
+  .title-social {
+    margin: 0px;
+    margin-left: -13px;
+  }
+  .div_icon{
+    float: right;
+    margin-top: -30px;
+  }
+}
 
 @media only screen and (min-width: 992px) {
   .capa{
