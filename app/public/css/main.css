@@ -402,6 +402,21 @@ a:link {
 }
 
 
+/* =======================TELA QUEM SOMOS=====================*/
+.bannerSobre {
+  width: 100%;
+  /* max-width: 1380px; */
+  height: 100%;
+  background-image: url('/img/bannerSobre.jpg');
+  background-size: cover;
+  position: relative;
+  display: table;
+}
+
+
+
+
+
 
 
 /* =======================TELA CADASTRO=====================*/
@@ -411,7 +426,6 @@ a:link {
 
 /* =======================TELA EVENTOS=====================*/
 
-/* =======================TELA QUEM SOMOS=====================*/
 
 /* =======================TELA DASHBOARD=====================*/
 
@@ -479,6 +493,7 @@ a:link {
   .capa {
     background-image: url('/img/capa_p.png');
   }
+
   .texto_capa h1 {
     font-family: 'Courier New', Courier, monospace;
     font-style: oblique;
@@ -500,17 +515,18 @@ a:link {
     margin-bottom: 0
   }
 
-  .img_quem{
+  .img_quem {
     width: 100%;
   }
 
-  .img_exem{
+  .img_exem {
     width: 100%;
   }
 
-  .apoie{
+  .apoie {
     padding-left: 0%;
   }
+
   .title-apoie {
     margin: 0px;
     margin-left: -10px;
@@ -521,14 +537,17 @@ a:link {
     margin-top: -30px;
     font: 15px/25px Montserrat-Medium, Helvetica, Arial, sans-serif;
   }
-  .div_social{
+
+  .div_social {
     margin-top: 30px;
   }
+
   .title-social {
     margin: 0px;
     margin-left: -13px;
   }
-  .div_icon{
+
+  .div_icon {
     float: right;
     margin-top: -30px;
   }
@@ -542,13 +561,13 @@ a:link {
 
 
 @media only screen and (min-width: 600px) {
-  .img_quem{
+  .img_quem {
     width: 100%;
     max-width: 434px;
     max-height: 263px;
   }
 
-  .img_exem{
+  .img_exem {
     width: 100%;
     max-width: 434px;
     max-height: 263px;
@@ -560,9 +579,10 @@ a:link {
 @media only screen and (min-width: 768px) {}
 
 @media only screen and (min-width: 600px) and (max-width: 991px) {
-  .apoie{
+  .apoie {
     padding-left: 0%;
   }
+
   .title-apoie {
     margin: 0px;
     margin-left: -10px;
@@ -573,21 +593,24 @@ a:link {
     margin-top: -30px;
     font: 15px/25px Montserrat-Medium, Helvetica, Arial, sans-serif;
   }
-  .div_social{
+
+  .div_social {
     margin-top: 30px;
   }
+
   .title-social {
     margin: 0px;
     margin-left: -13px;
   }
-  .div_icon{
+
+  .div_icon {
     float: right;
     margin-top: -30px;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .capa{
+  .capa {
     min-height: 535px;
   }
 
@@ -614,7 +637,37 @@ a:link {
   }
 
   .btn_donate {
-  min-width: 255px;
+    min-width: 255px;
+  }
+
+  /* Sobre */
+  .bannerSobre {
+    min-height: 535px;
+  }
+
+  .bannerSobre_texto {
+    top: 0;
+    justify-content: center;
+    padding: 20px 50% 20px 8px;
+    padding-left: calc((100% - 1140px) /2);
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .texto_bannerSobre {
+    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    font-size: 54px;
+    line-height: 1.2;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #fff;
+
   }
 }
 
