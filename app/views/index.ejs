@@ -17,68 +17,7 @@
 </head>
 
 <body>
-  <!-- Barra de navegação -->
-  <nav class="navbar navbar-default" id="barraNav">
-    <div class="container">
-      <!-- Header -->
-      <div class="navbar-header">
-        <!-- Botao toggle -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao"
-          id="btn-nav">
-          <span class="sr-only">alternar navegação</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="/" class="navbar-brand">
-          <span class="img-logo">Novo Anjo</span>
-        </a>
-      </div>
-      <!-- Navbar -->
-      <div class="collapse navbar-collapse" id="barra-navegacao">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/sobre">Quem Somos</a></li>
-          <li><a href="">Eventos</a></li>
-          <li><a href="">Preciso de ajuda</a></li>
-          <li><a href="">Contato</a></li>
-          <li><a href="">Participar</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-              aria-expanded="false">Entrar
-              <span class="caret"></span></a>
-            <ul id="login-dp" class="dropdown-menu">
-              <li>
-                <div class="row">
-                  <div class="col-md-12">
-                    <span class="texto_logar">Logar</span>
-                    <br /><br />
-                    <form class="form" role="form" method="post" action="validar_acesso.php"
-                      accept-charset="UTF-8" id="login-nav">
-                      <div class="form-group">
-                        <label class="sr-only">Email</label>
-                        <input type="email" class="form-control" name="email" id="formLogarEmail"
-                          placeholder="Digite seu email" required>
-                      </div>
-                      <div class="form-group">
-                        <label class="sr-only">Senha</label>
-                        <input type="password" class="form-control" name="senha" id="formLogarSenha"
-                          placeholder="Senha" required>
-                        <div class="help-block text-right"><a href="">Esqueceu
-                            a senha ?</a></div>
-                      </div>
-                      <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block" id="btb_navLog">Entrar</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div><!-- /container -->
-  </nav><!-- /Barra de navegação -->
+  <%- include('menu'); %>
   <!-- Capa -->
   <div class="capa">
     <div class="texto_capa">
@@ -238,50 +177,7 @@
       </div>
     </div>
   </section>
-  <!-- Rodape -->
-  <footer class="footer">
-    <div class="rodape container col-md-12">
-      <section>
-        <div class="col-md-6 sobre_rod">
-          <img src="/img/logo_b.png" alt="Novo Anjo">
-          <p class="res_rod">Somos uma organização sem fins lucrativos com a missão de multiplicar a solidariedade.
-            Criada em 2019, promovemos um ambiente de solidariedade que estimula o crescimento da generosidade, compaixão
-            e o amor ao próximo.</p>
-        </div>
-        <div class="col-md-6">
-          <div class="col-md-4">
-            <h4>Mapa do Site</h4>
-            <div class="navbar nav_footer">
-              <ul>
-                <li><a href="">Eventos</a></li>
-                <li><a href="">Inspirações</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <h4>Recursos</h4>
-            <div class="navbar nav_footer">
-              <ul>
-                <li><a href="">Serviços</a></li>
-                <li><a href="">Livros</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <h4>Novo Anjo</h4>
-            <div class="navbar nav_footer">
-              <ul>
-                <li><a href="">Quem Somos</a></li>
-                <li><a href="">Doe para a nossa causa</a></li>
-                <li><a href="">Fale com a gente</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </footer><!-- /Rodape -->
-
+  <%- include('rodape'); %>
 
 
 

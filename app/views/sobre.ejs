@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,76 +14,25 @@
 
   <title>Novo Anjo</title>
 </head>
-<body>
-  <!-- Barra de navegação -->
-  <nav class="navbar navbar-default" id="barraNav">
-      <div class="container">
-        <!-- Header -->
-        <div class="navbar-header">
-          <!-- Botao toggle -->
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#barra-navegacao"
-            id="btn-nav">
-            <span class="sr-only">alternar navegação</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="/" class="navbar-brand">
-            <span class="img-logo">Novo Anjo</span>
-          </a>
-        </div>
-        <!-- Navbar -->
-        <div class="collapse navbar-collapse" id="barra-navegacao">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/">Quem Somos</a></li>
-            <li><a href="">Eventos</a></li>
-            <li><a href="">Preciso de ajuda</a></li>
-            <li><a href="">Contato</a></li>
-            <li><a href="">Participar</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                aria-expanded="false">Entrar
-                <span class="caret"></span></a>
-              <ul id="login-dp" class="dropdown-menu">
-                <li>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <span class="texto_logar">Logar</span>
-                      <br /><br />
-                      <form class="form" role="form" method="post" action="validar_acesso.php"
-                        accept-charset="UTF-8" id="login-nav">
-                        <div class="form-group">
-                          <label class="sr-only">Email</label>
-                          <input type="email" class="form-control" name="email" id="formLogarEmail"
-                            placeholder="Digite seu email" required>
-                        </div>
-                        <div class="form-group">
-                          <label class="sr-only">Senha</label>
-                          <input type="password" class="form-control" name="senha" id="formLogarSenha"
-                            placeholder="Senha" required>
-                          <div class="help-block text-right"><a href="">Esqueceu
-                              a senha ?</a></div>
-                        </div>
-                        <div class="form-group">
-                          <button type="submit" class="btn btn-primary btn-block" id="btb_navLog">Entrar</button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div><!-- /container -->
-    </nav><!-- /Barra de navegação -->
-    <!-- Capa -->
-    <div class="bannerSobre">
-      <div class="bannerSobre_texto">
-        <h2 class="texto_bannerSobre">Somos uma organização sem fins lucrativos</h2>
-      </div>
-    </div><!-- /Capa -->
 
+<body>
+  <%- include('menu'); %>
+  <!-- Capa -->
+  <div class="bannerSobre">
+    <div class="bannerSobre_texto">
+      <h2 class="texto_bannerSobre">Somos uma organização sem fins lucrativos</h2>
+    </div>
+  </div><!-- /Capa -->
+  <!-- Nossa Causa -->
+  <section class="nossaCausa">
+    <div class="container">
+      <h2 class="title_nossaCausa">
+        <small>Nossa Causa</small>
+        Juntos multiplicamos o poder da solidariedade.
+      </h2>
+    </div>
+  </section>
+  <%- include('rodape'); %>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -94,4 +44,5 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript" src='/js/main.js'></script>
 </body>
+
 </html>
