@@ -436,8 +436,104 @@ a:link {
 
 }
 
+.nossaCausa {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 
+.title_nossaCausa {
+  color: #2c3239;
+  text-align: center;
+  margin: 0;
+}
 
+.title_nossaCausa small {
+  display: block;
+  font: 17px/1 Montserrat-Medium, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+  color: #2c3239;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.nossaCausa hr {
+  margin: 20px auto;
+  border: none;
+  width: 150px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #1b9897;
+}
+
+.listaPerguntas {
+  margin-top: 70px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.pergunta strong {
+  font-weight: 700;
+}
+
+.pergunta p {
+  color: #555;
+  font: 1.3em/1.8 Georgia, serif;
+  letter-spacing: .5px;
+  width: 85%;
+}
+
+.nossosValores {
+  margin-top: 70px;
+  text-align: left;
+}
+
+.nossosValores h2 {
+  margin: 0;
+  font: 3em/1.2 Georgia, serif;
+  letter-spacing: .5px;
+}
+
+.nossosValores hr {
+  margin: 20px 0;
+  border: none;
+  width: 150px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #1b9897;
+}
+
+.acordeaoPadrao {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.acordeao:first-child {
+  margin-top: 0;
+}
+
+.acordeao {
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.acordeao h3 {
+  position: relative;
+  background: #f5f7f7;
+  border-radius: 4px;
+  padding: 20px 0 20px 65px;
+  text-align: left;
+  margin: 0;
+}
+
+.acordeao h3::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 25px;
+  left: 30px;
+  background: url('/img/plus.png');
+}
 
 
 
@@ -510,6 +606,15 @@ a:link {
   font: 13.5px/32px Montserrat-Regular, Helvetica, Arial, sans-serif;
 }
 
+/* Sobre */
+.title_nossaCausa {
+  font: 3em/1.2 Georgia, serif;
+  letter-spacing: .5px;
+}
+
+.acordeao h3 {
+  font-family: Georgia,serif;
+}
 
 /* ======================================Media-Queries==================================== */
 @media only screen and (max-width: 600px) {
