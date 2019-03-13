@@ -71,7 +71,7 @@ version: 0.1
 
 .capa {
   width: 100%;
-  max-width: 1319px;
+  max-width: 1980px;
   height: 100%;
   background-image: url('/img/capa_g.png');
   background-size: cover;
@@ -768,6 +768,7 @@ a:link {
   .squem-card {
     box-sizing: border-box;
     width: calc(50% - 210px);
+    max-width: 430px;
     height: 550px;
     margin-right: 70px;
     margin-bottom: 10px
