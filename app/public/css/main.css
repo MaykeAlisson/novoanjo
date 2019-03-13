@@ -535,7 +535,14 @@ a:link {
   background: url('/img/plus.png');
 }
 
+.AcordeaoPadrao .acordeao.ativo h3 {
+    color: #fff;
+    background: #1b9897
+}
 
+.AcordeaoPadrao .acordeao.ativo h3:after {
+  background: url(img/plus-.png)
+}
 
 
 /* =======================TELA CADASTRO=====================*/
