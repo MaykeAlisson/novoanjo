@@ -484,6 +484,7 @@ a:link {
 
 .nossosValores {
   margin-top: 70px;
+  margin-bottom: 50px;
   text-align: left;
 }
 
@@ -535,13 +536,23 @@ a:link {
   background: url('/img/plus.png');
 }
 
-.AcordeaoPadrao .acordeao.ativo h3 {
-    color: #fff;
-    background: #1b9897
+.acordeaoPadrao .acordeao.ativo h3 {
+  color: #fff;
+  background: #1b9897
 }
 
-.AcordeaoPadrao .acordeao.ativo h3:after {
-  background: url(img/plus-.png)
+.acordeaoPadrao .acordeao.ativo h3:after {
+  background: url('/img/plus-.png');
+}
+
+.acordeao p {
+  font: 1.3em/1.2 Montserrat-Regular, Helvetica, Arial, sans-serif;
+  padding: 20px 25px 0;
+  margin: 0;
+  line-height: 2;
+  color: #555;
+  text-align: left;
+  letter-spacing: .5px;
 }
 
 
@@ -620,7 +631,7 @@ a:link {
 }
 
 .acordeao h3 {
-  font-family: Georgia,serif;
+  font-family: Georgia, serif;
 }
 
 /* ======================================Media-Queries==================================== */
