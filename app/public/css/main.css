@@ -366,6 +366,7 @@ a:link {
 .rodape {
   background-color: #2c3239;
   padding: 70px 0;
+  width: 100%;
 }
 
 .sobre_rod {
@@ -555,6 +556,62 @@ a:link {
   letter-spacing: .5px;
 }
 
+/* =======================TELA QUEM APOIAMOS=====================*/
+.bannerQuemApoiamos {
+  width: 100%;
+  /* max-width: 1380px; */
+  height: 100%;
+  background-image: url('/img/apoiamos.jpg');
+  background-size: cover;
+  position: relative;
+  display: table;
+}
+
+.bannerQuemApoiamos_texto {
+  top: 0;
+  justify-content: center;
+  padding: 20px 10% 20px 8px;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  bottom: 0;
+  width: 100%;
+}
+
+.texto_bannerQuemApoiamos {
+  text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 0;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #fff;
+}
+
+.quemApoiamos {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.title-quemApoiamos {
+  color: #2c3239;
+  text-align: center;
+  margin: 0;
+}
+
+.quemApoiamos hr {
+  margin: 20px auto;
+  border: none;
+  width: 150px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #1b9897;
+}
+
+.desc_quemApoiamos{
+  color: #555;
+}
 
 /* =======================TELA CADASTRO=====================*/
 
@@ -632,6 +689,17 @@ a:link {
 
 .acordeao h3 {
   font-family: Georgia, serif;
+}
+
+/* Quem Apoiamos */
+.title-quemApoiamos {
+  font: 3em/1.2 Georgia, serif;
+  letter-spacing: .5px;
+}
+
+.desc_quemApoiamos{
+  font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
 }
 
 /* ======================================Media-Queries==================================== */
@@ -762,6 +830,15 @@ a:link {
   .bannerSobre_texto {
     padding: 100px 50% 20px 8px;
   }
+
+  /* Quem Apoiamos */
+  .bannerQuemApoiamos {
+    min-height: 335px;
+  }
+
+  .bannerQuemApoiamos_texto {
+    padding: 100px 50% 20px 8px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -808,6 +885,21 @@ a:link {
   }
 
   .texto_bannerSobre {
+    font-size: 54px;
+  }
+
+  /* Quem Apoiamos */
+  .bannerQuemApoiamos {
+    min-height: 535px;
+  }
+
+  .bannerQuemApoiamos_texto {
+    padding: 20px 50% 20px 8px;
+    padding-left: calc((100% - 1140px) /2);
+    position: absolute;
+  }
+
+  .texto_bannerQuemApoiamos {
     font-size: 54px;
   }
 }
