@@ -609,14 +609,53 @@ a:link {
   background-color: #1b9897;
 }
 
-.desc_quemApoiamos{
+.desc_quemApoiamos {
   color: #555;
 }
 
-/* =======================TELA CADASTRO=====================*/
-
-
 /* =======================TELA EVENTO=====================*/
+header{
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #e8eef2;
+}
+.title {
+  margin: 0;
+  display: inline-block;
+  text-transform: uppercase;
+  font: 2.2em/1.5 Montserrat-Medium, Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  color: #2c3239;
+}
+
+.title::after{
+  display: block;
+  margin-bottom: -2px;
+  width: calc(100% + 50px);
+  height: 3px;
+  content: "";
+  background-color: #1b9897;
+}
+
+.eventos{
+  /* margin-left: 20px; */
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+.card_evento{
+  width: 360px;
+  height: 395px;
+  margin-right: 10px;
+  margin-bottom: 13px;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1.5px solid #e8eef2;
+  /* border: 2px solid red; */
+}
+
+/* =======================TELA CADASTRO=====================*/
 
 /* =======================TELA EVENTOS=====================*/
 
@@ -697,7 +736,7 @@ a:link {
   letter-spacing: .5px;
 }
 
-.desc_quemApoiamos{
+.desc_quemApoiamos {
   font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
   letter-spacing: .5px;
 }
