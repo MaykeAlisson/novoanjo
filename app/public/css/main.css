@@ -1,5 +1,5 @@
 /*@ autor : Mayke Alisson <maykealison@gmail.com>
-version: 0.1
+version: 1.0
 */
 
 /* =========================================Layout======================================== */
@@ -102,6 +102,7 @@ version: 0.1
   margin-left: auto;
   margin-right: auto;
   padding: 50px 0;
+  margin-top: 30px;
 }
 
 .squem-card {
@@ -165,7 +166,7 @@ version: 0.1
 /* Secao Apoie */
 .apoie {
   background-color: #f7f7f7;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .title-apoie {
@@ -207,6 +208,7 @@ version: 0.1
 /* Servicos */
 .servicos {
   margin-top: 80px;
+  margin-bottom: 30px;
 }
 
 .servicos hr {
@@ -262,19 +264,19 @@ a:link {
 }
 
 /* Eventos */
-.evento {
+.index_evento {
   background-color: #f7f7f7;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 80px;
+  margin-top: 50px;
   padding-left: 0%;
   padding-right: 0%;
 }
 
-.img_evento {
+.index_img_evento {
   padding-left: 0%;
 }
 
-.evento hr {
+.index_evento hr {
   margin-left: 0;
   border: none;
   width: 150px;
@@ -283,11 +285,11 @@ a:link {
   background-color: #1b9897;
 }
 
-.img-evento {
+.index_img-evento {
   width: 100%;
 }
 
-.title-evento {
+.index_title-evento {
   text-align: left;
   margin-top: 0;
   color: #2c3239;
@@ -295,7 +297,7 @@ a:link {
   letter-spacing: .5px;
 }
 
-.title-evento::before {
+.index_title-evento::before {
   display: inline-block;
   margin-right: 15px;
   width: 10px;
@@ -306,13 +308,17 @@ a:link {
   content: "";
 }
 
-.desc_evento {
+.index_desc_evento {
   margin: 0;
   color: #555;
   margin-bottom: 20px;
 }
 
 /* Inspiração */
+.inspiracao{
+  margin-bottom: 50px;
+}
+
 .title-inspiracao {
   text-align: left;
   margin-top: 0;
@@ -406,7 +412,6 @@ a:link {
 /* =======================TELA QUEM SOMOS=====================*/
 .bannerSobre {
   width: 100%;
-  /* max-width: 1380px; */
   height: 100%;
   background-image: url('/img/bannerSobre.jpg');
   background-size: cover;
@@ -559,7 +564,6 @@ a:link {
 /* =======================TELA QUEM APOIAMOS=====================*/
 .bannerQuemApoiamos {
   width: 100%;
-  /* max-width: 1380px; */
   height: 100%;
   background-image: url('/img/apoiamos.jpg');
   background-size: cover;
@@ -613,8 +617,8 @@ a:link {
   color: #555;
 }
 
-/* =======================TELA EVENTO=====================*/
-header{
+/* =======================TELA EVENTOS=====================*/
+.headEventos{
   position: relative;
   margin-top: 40px;
   margin-bottom: 50px;
@@ -639,7 +643,6 @@ header{
 }
 
 .eventos{
-  /* margin-left: 20px; */
   margin-right: 20px;
   margin-bottom: 50px;
 }
@@ -652,9 +655,61 @@ header{
   box-sizing: border-box;
   background-color: #fff;
   border: 1.5px solid #e8eef2;
-  /* border: 2px solid red; */
 }
 
+.img-eventos{
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.desc_card{
+  padding: 5px 20px 5px 20px;
+}
+
+.title_evento{
+  margin: 3px;
+  height: auto;
+  display: -webkit-box;
+  max-width: 100%;
+  line-height: 1.44;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: Montserrat-Bold,Helvetica,Arial,sans-serif;
+  letter-spacing: .5px;
+  font-size: 18px;
+  text-align: left;
+  color: #2c3239;
+}
+
+.eventos h3{
+  font: 1.7em/1.2 Montserrat-Bold,Helvetica,Arial,sans-serif;
+}
+
+.eventos p{
+  font-family: Montserrat-Bold,Helvetica,Arial,sans-serif;
+  font-size: 1.4em;
+  line-height: 1.8;
+  letter-spacing: .4px;
+  margin: 0;
+  font: 1.2em/1.88 Montserrat-Regular,Helvetica,Arial,sans-serif;
+  color: #555;
+}
+
+.eventos small{
+  font-size: 1em;
+  margin-left: 10px;
+  color: #1b9897;
+}
+
+.eventos button{
+  padding: 3px;
+  margin-top: 3px;
+}
 /* =======================TELA CADASTRO=====================*/
 
 /* =======================TELA EVENTOS=====================*/
@@ -701,7 +756,7 @@ header{
   letter-spacing: .5px;
 }
 
-.desc_evento {
+.index_desc_evento {
   font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
   letter-spacing: .5px;
 }
@@ -943,15 +998,3 @@ header{
   }
 }
 
-/*
-@media only screen and (min-width: 769px) and (max-width: 994px) {
-  .capa {
-    width: 100%;
-    max-width: 1319px;
-    max-height: 300px;
-    background-image: url('/img/capa_c.png');
-    background-size: cover;
-    position: relative;
-    display: table;
-  }
-} */
