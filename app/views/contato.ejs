@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
+  <!-- CSS -->
+  <link href="/css/main.css" rel="stylesheet">
+
+  <title>Contato | Novo Anjo</title>
+</head>
+
+<body>
+  <!-- Menu -->
+  <%- include('menu'); %>
+  <!-- /Menu -->
+
+  <main>
+  <!-- Capa -->
+    <div class="bannerContato">
+      <div class="bannerContato_texto">
+        <h2 class="texto_bannerContato">Entre em contato conosco</h2>
+      </div>
+    </div>
+      <!-- /Capa -->
+
+      <div class="container">
+        <header class="headEventos">
+          <h2 class="title">Contato</h2>
+        </header>
+      </div>
+
+      <!-- Formulário -->
+      <div class="formularioContato">
+        <form name="" action="" method="POST">  
+
+          <p><input type="text"  class="input-formulario" name="nome" placeholder="Nome" required="required"></p>
+          <p><input type="email" class="input-formulario" name="email" placeholder="Email"></p>
+          <p><input type="text"  class="input-formulario" name="telefone" placeholder="Telefone de contato" required="required"></p>
+          <p><input type="text"  class="input-formulario" name="assunto" placeholder="Assunto" required="required"></p>
+          <p><textarea class="input-formulario-mensagem" name="mensagem" class="" rows="4" cols="50" placeholder="Deixe sua mensagem."></textarea></p>
+            
+          <div id="btn-enviar">
+           <p><input type="submit" class="btn-enviar" name="enviar" value="Enviar" onclick=""></p>  
+          </div>                 
+        </form>
+      </div>      
+      <!-- /Formulário -->
+  </main>
+
+   <!-- Rodape -->
+   <%- include('rodape'); %>
+   <!-- /Rodape -->
+
+    <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src='/js/main.js'></script>
+</body>
+
+</html>

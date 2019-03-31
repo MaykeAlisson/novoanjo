@@ -710,6 +710,94 @@ a:link {
   padding: 3px;
   margin-top: 3px;
 }
+
+/* =======================TELA CONTATO=====================*/
+
+.bannerContato {
+  width: 100%;
+  height: 100%;
+  background-image: url('/img/bannerContato.jpg');
+  background-size: cover;
+  position: relative;
+  display: table;
+}
+
+.bannerContato_texto {
+  top:0;
+  justify-content: center;
+  padding: 20px 10% 20px 8px;
+  display: flex;
+  align-items:  end;
+  flex-direction: column;
+  bottom:  0;
+  width: 100%;
+}
+
+.texto_bannerContato {
+  text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 0;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #fff;
+}
+
+.formularioContato {
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 0 10px 10px 10px;  
+}
+
+.input-formulario {
+  width: 440px;
+  height:45px;
+  border: 1px solid #d3d3d3;
+  color: #999797;
+  padding-left: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.input-formulario::placeholder {
+  color: #999797;
+}
+
+.input-formulario:hover{
+  border-color: #7dc6dd;
+}
+
+.input-formulario-mensagem{
+  width: 440px;
+  height: 150px;
+  border: 1px solid #d3d3d3;
+  color: #999797;
+  padding-left: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.input-formulario-mensagem::placeholder {
+  color: #999797;
+}
+
+.input-formulario-mensagem:hover{
+  border-color: #7dc6dd;
+}
+
+#btn-enviar{text-align: center;}
+
+.btn-enviar{
+  width: 200px;
+  height: 35px;
+  border: none;
+  color: white;
+  background-color: #1b9897;
+  border-radius: 3px 3px 3px 3px;
+  margin-right: 55px;
+}
+
 /* =======================TELA CADASTRO=====================*/
 
 /* =======================TELA EVENTOS=====================*/
