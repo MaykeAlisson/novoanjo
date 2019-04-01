@@ -771,7 +771,7 @@ a:link {
 
 .input-formulario-mensagem{
   width: 440px;
-  height: 150px;
+  height: 130px;
   border: 1px solid #d3d3d3;
   color: #999797;
   padding-left: 5px;
@@ -799,6 +799,10 @@ a:link {
   margin-right: 55px;
 }
 
+.btn-enviar:hover{
+  background-color: #167a79;
+}
+
 .title-contato {
   margin: 0;
   display: inline-block;
@@ -813,7 +817,7 @@ a:link {
   display: flex;
   position:relative;
   margin-top: 0%;
-  left: 53%;
+  left: 45%;
   transform: translate(-50%, -50%);
 }
 
@@ -839,7 +843,7 @@ a:link {
 .red-soc li a .fab{
   position: relative;
   color:#666666;
-  transform: .40s;
+  transition: .5s;
 }
 .red-soc li a:hover .fab{
   transform:rotateY(360deg);
