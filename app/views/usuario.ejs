@@ -63,16 +63,20 @@
         </div>
         <section class="perfil-usuario">
           <!-- Form Perfil do Usuário -->
-          <div class="row">
-            <!-- edit form column -->
-            <div class="col-md-9">
-              <form class="form-horizontal" role="form">
+          <form class="form-horizontal" role="form">
+            <div class="row">
+              <!-- edit form column -->
+              <div class="col-md-12">
                 <div class="form-group">
                   <label for="nome" class="col-lg-3 control-label">Nome:</label>
                   <div class="col-lg-8">
                     <input id="nome" class="form-control" type="text" value="<%=usuario.nome%>" />
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label for="sobrenome" class="col-lg-3 control-label">Sobrenome:</label>
                   <div class="col-lg-8">
@@ -84,6 +88,10 @@
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label for="organizacao" class="col-lg-3 control-label">Organização:</label>
                   <div class="col-lg-8">
@@ -95,12 +103,20 @@
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label for="email" class="col-lg-3 control-label">E-mail:</label>
                   <div class="col-lg-8">
                     <input id="email" class="form-control" type="text" value="<%=usuario.email%>" />
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
                 <div class="form-group">
                   <label for="tel" class="col-lg-3 control-label">Telefone:</label>
                   <div class="col-lg-8">
@@ -112,29 +128,39 @@
                     />
                   </div>
                 </div>
-                <div class="row">
-                  <div class="form-check">
-                    <label for="anjo" class="col-lg-3 control-label">Anjo:</label>
-                    <div class="col-md-2 form-check">
-                      <input id="anjo" class="form-check-input" type="checkbox" <%= usuario.anjo ?
-                      'checked' : '' %> />
-                    </div>
-                  </div>
-                  <div class="form-check">
-                    <label for="beneficiario" class="col-lg-3 control-label">Beneficiario:</label>
-                    <div class="col-md-2 form-check">
-                      <input id="beneficiario" class="form-check-input" type="checkbox" <%=
-                      usuario.beneficiario ? 'checked' : '' %>
-                    </div>
-                  </div>
-                </div>
-              </form>
+              </div>
             </div>
-          </div>
+            <div class="row">
+              <div class="col-md-3 checkbox-container">
+                <div class="form-group">
+                  <label for="anjo" class="col-sm-3 control-label">Anjo:</label>
+                  <input id="anjo" class="form-check-input" type="checkbox" <%= usuario.anjo ?
+                  'checked' : '' %> />
+                </div>
+              </div>
+              <div class="col-md-3 checkbox-container">
+                <div class="form-group">
+                  <label for="beneficiario" class="col-sm-3 control-label">Beneficiario:</label>
+                  <input id="beneficiario" class="form-check-input" type="checkbox" <%=
+                  usuario.beneficiario ? 'checked' : '' %> />
+                </div>
+              </div>
+              <div class="col-md-6 depoimento-container">
+                <div class="form-group">
+                  <label for="depoimento" class="col-sm-3 control-label">Depoimento:</label>
+                  <textarea
+                    id="depoimento"
+                    class="form-control"
+                    value="<%=usuario.depoimento%>"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </form>
           <!-- /Form Perfil do Usuário -->
         </section>
       </div>
-      <!-- Eventos -->
+      <!-- Usuario -->
     </main>
 
     <!-- Footer -->

@@ -711,13 +711,47 @@ a:link {
 /* =======================TELA QUEM USUARIO=====================*/
 main > .container-fluid > .head-perfil > .btn {
   position: absolute;
-  right: 33%;
+  right: 10%;
   margin-top: 8px;
+}
+
+@media (max-width: 400px) {
+  .head-perfil > .title {
+    font-size: 20px;
+  }
+
+  main > .container-fluid > .head-perfil > .btn {
+    right: 5%;
+  }
 }
 
 main > .container-fluid > .head-perfil > .btn:hover {
   background-color: #eee;
 }
+
+.checkbox-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.depoimento-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+label[for='anjo'] {
+  margin-right: 35px;
+}
+
+label[for='beneficiario'] {
+  margin-right: 65px;
+}
+
+#anjo,
+#beneficiario {
+  transform: translate(0, 5px);
+}
+
 /* =======================TELA CADASTRO=====================*/
 
 /* =======================TELA EVENTOS=====================*/
