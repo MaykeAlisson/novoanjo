@@ -31,12 +31,12 @@ version: 1.0
   color: transparent;
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
   color: black;
 }
 
-.navbar-default .navbar-nav>li>a:hover {
-  color: #00BFFF;
+.navbar-default .navbar-nav > li > a:hover {
+  color: #00bfff;
 }
 
 .navbar-toggle .icon-bar {
@@ -79,7 +79,6 @@ version: 1.0
   display: table;
 }
 
-
 .texto_capa {
   text-align: center;
   color: black;
@@ -107,34 +106,34 @@ version: 1.0
 
 .squem-card {
   background-color: #fff;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, .1), 0 1px 2px rgba(0, 0, 0, .2);
-  transition: box-shadow .4s cubic-bezier(.25, .8, .25, 1)
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .limit {
-  padding: 20px 30px
+  padding: 20px 30px;
 }
 
 .SobreQuem .squem-cat {
   margin: 0;
   font: 1.4em/1 Montserrat-Bold, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   text-decoration: none;
   white-space: nowrap;
   text-overflow: ellipsis;
   color: #1b9897;
-  overflow: hidden
+  overflow: hidden;
 }
 
 .SobreQuem .squem-title {
   margin: 0;
   font: 3em/1.36 Georgia, serif;
   overflow: hidden;
-  color: #2c3239
+  color: #2c3239;
 }
 
 .SobreQuem .squem-card:hover {
-  box-shadow: 0 12px 18px rgba(0, 0, 0, .1), 0 10px 14px rgba(0, 0, 0, .05)
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.1), 0 10px 14px rgba(0, 0, 0, 0.05);
 }
 
 .SobreQuem .squem-desc {
@@ -149,18 +148,18 @@ version: 1.0
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #555
+  color: #555;
 }
 
 .SobreQuem .squem-cta {
   font: 1.6em/1.88 Montserrat-Bold, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: #1b9897;
-  text-decoration: none
+  text-decoration: none;
 }
 
 .SobreQuem hr {
-  margin-left: 0
+  margin-left: 0;
 }
 
 /* Secao Apoie */
@@ -225,7 +224,7 @@ version: 1.0
   margin-top: 0;
   color: #2c3239;
   font: 3em/1.2 Georgia, serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .desc-servicos {
@@ -236,7 +235,7 @@ version: 1.0
 
 .servicos-mais {
   font: 1.6em/1.88 Montserrat-Bold, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: #1b9897;
 }
 
@@ -294,7 +293,7 @@ a:link {
   margin-top: 0;
   color: #2c3239;
   font: 3em/1.2 Georgia, serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .index_title-evento::before {
@@ -305,7 +304,7 @@ a:link {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   background-color: #1b9897;
-  content: "";
+  content: '';
 }
 
 .index_desc_evento {
@@ -315,7 +314,7 @@ a:link {
 }
 
 /* Inspiração */
-.inspiracao{
+.inspiracao {
   margin-bottom: 50px;
 }
 
@@ -324,7 +323,7 @@ a:link {
   margin-top: 0;
   color: #2c3239;
   font: 3em/1.2 Georgia, serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .inspiracao hr {
@@ -345,7 +344,7 @@ a:link {
 .depoimento {
   margin-bottom: 20px;
   background-color: #f7f7f7;
-  border-left: 6px solid #F0E68C;
+  border-left: 6px solid #f0e68c;
 }
 
 .dep_msg {
@@ -356,7 +355,7 @@ a:link {
   max-width: 100%;
   max-height: 90.24px;
   font-size: 16px;
-  line-height: 1.50;
+  line-height: 1.5;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -382,12 +381,12 @@ a:link {
 .res_rod {
   text-align: left;
   font: 15px/1.57 Montserrat-Regular, Helvetica, Arial, sans-serif;
-  color: #DCDCDC;
+  color: #dcdcdc;
   max-width: 450px;
 }
 
 .footer h4 {
-  color: #DCDCDC;
+  color: #dcdcdc;
   margin: 0 0 26px;
   font-weight: 500;
   text-transform: uppercase;
@@ -400,14 +399,13 @@ a:link {
 .footer a {
   font-size: 12px;
   line-height: 15px;
-  color: #DCDCDC;
+  color: #dcdcdc;
   text-decoration: none;
 }
 
 .rodape a:hover {
   color: #1b9897;
 }
-
 
 /* =======================TELA QUEM SOMOS=====================*/
 .bannerSobre {
@@ -431,15 +429,14 @@ a:link {
 }
 
 .texto_bannerSobre {
-  text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-size: 34px;
   line-height: 1.2;
   margin: 0;
   font-family: Georgia, serif;
   font-weight: 700;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: #fff;
-
 }
 
 .nossaCausa {
@@ -456,7 +453,7 @@ a:link {
 .title_nossaCausa small {
   display: block;
   font: 17px/1 Montserrat-Medium, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: #2c3239;
   margin: 0 0 10px;
   text-transform: uppercase;
@@ -484,7 +481,7 @@ a:link {
 .pergunta p {
   color: #555;
   font: 1.3em/1.8 Georgia, serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   width: 85%;
 }
 
@@ -497,7 +494,7 @@ a:link {
 .nossosValores h2 {
   margin: 0;
   font: 3em/1.2 Georgia, serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .nossosValores hr {
@@ -534,7 +531,7 @@ a:link {
 
 .acordeao h3::after {
   position: absolute;
-  content: "";
+  content: '';
   width: 16px;
   height: 16px;
   top: 25px;
@@ -544,7 +541,7 @@ a:link {
 
 .acordeaoPadrao .acordeao.ativo h3 {
   color: #fff;
-  background: #1b9897
+  background: #1b9897;
 }
 
 .acordeaoPadrao .acordeao.ativo h3:after {
@@ -558,7 +555,7 @@ a:link {
   line-height: 2;
   color: #555;
   text-align: left;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 /* =======================TELA QUEM APOIAMOS=====================*/
@@ -583,13 +580,13 @@ a:link {
 }
 
 .texto_bannerQuemApoiamos {
-  text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-size: 34px;
   line-height: 1.2;
   margin: 0;
   font-family: Georgia, serif;
   font-weight: 700;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   color: #fff;
 }
 
@@ -618,7 +615,7 @@ a:link {
 }
 
 /* =======================TELA EVENTOS=====================*/
-.headEventos{
+.headEventos {
   position: relative;
   margin-top: 40px;
   margin-bottom: 50px;
@@ -633,20 +630,20 @@ a:link {
   color: #2c3239;
 }
 
-.title::after{
+.title::after {
   display: block;
   margin-bottom: -2px;
   width: calc(100% + 50px);
   height: 3px;
-  content: "";
+  content: '';
   background-color: #1b9897;
 }
 
-.eventos{
+.eventos {
   margin-right: 20px;
   margin-bottom: 50px;
 }
-.card_evento{
+.card_evento {
   width: 360px;
   height: 395px;
   margin-right: 10px;
@@ -657,7 +654,7 @@ a:link {
   border: 1.5px solid #e8eef2;
 }
 
-.img-eventos{
+.img-eventos {
   position: relative;
   width: 100%;
   min-width: 100%;
@@ -665,11 +662,11 @@ a:link {
   overflow: hidden;
 }
 
-.desc_card{
+.desc_card {
   padding: 5px 20px 5px 20px;
 }
 
-.title_evento{
+.title_evento {
   margin: 3px;
   height: auto;
   display: -webkit-box;
@@ -679,45 +676,87 @@ a:link {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: Montserrat-Bold,Helvetica,Arial,sans-serif;
-  letter-spacing: .5px;
+  font-family: Montserrat-Bold, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.5px;
   font-size: 18px;
   text-align: left;
   color: #2c3239;
 }
 
-.eventos h3{
-  font: 1.7em/1.2 Montserrat-Bold,Helvetica,Arial,sans-serif;
+.eventos h3 {
+  font: 1.7em/1.2 Montserrat-Bold, Helvetica, Arial, sans-serif;
 }
 
-.eventos p{
-  font-family: Montserrat-Bold,Helvetica,Arial,sans-serif;
+.eventos p {
+  font-family: Montserrat-Bold, Helvetica, Arial, sans-serif;
   font-size: 1.4em;
   line-height: 1.8;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   margin: 0;
-  font: 1.2em/1.88 Montserrat-Regular,Helvetica,Arial,sans-serif;
+  font: 1.2em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
   color: #555;
 }
 
-.eventos small{
+.eventos small {
   font-size: 1em;
   margin-left: 10px;
   color: #1b9897;
 }
 
-.eventos button{
+.eventos button {
   padding: 3px;
   margin-top: 3px;
 }
+
+/* =======================TELA QUEM USUARIO=====================*/
+main > .container-fluid > .head-perfil > .btn {
+  position: absolute;
+  right: 10%;
+  margin-top: 8px;
+}
+
+@media (max-width: 400px) {
+  .head-perfil > .title {
+    font-size: 20px;
+  }
+
+  main > .container-fluid > .head-perfil > .btn {
+    right: 5%;
+  }
+}
+
+main > .container-fluid > .head-perfil > .btn:hover {
+  background-color: #eee;
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.depoimento-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+label[for='anjo'] {
+  margin-right: 35px;
+}
+
+label[for='beneficiario'] {
+  margin-right: 65px;
+}
+
+#anjo,
+#beneficiario {
+  transform: translate(0, 5px);
+}
+
 /* =======================TELA CADASTRO=====================*/
 
 /* =======================TELA EVENTOS=====================*/
 
-
 /* =======================TELA DASHBOARD=====================*/
-
-
 
 /* ======================================Tipografia==================================== */
 .texto_capa h1 {
@@ -739,7 +778,7 @@ a:link {
 
 .title-apoie {
   font: 18px/1.2 Montserrat-Medium, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .title-social {
@@ -748,27 +787,27 @@ a:link {
 
 .title-card {
   font: 18px/1.2 Montserrat-Medium, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .desc-servicos {
   font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .index_desc_evento {
   font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .desc_inspiracao {
   font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .footer h4 {
   font: 1.3em/1.1 Montserrat-Medium, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .footer a {
@@ -778,7 +817,7 @@ a:link {
 /* Sobre */
 .title_nossaCausa {
   font: 3em/1.2 Georgia, serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .acordeao h3 {
@@ -788,12 +827,12 @@ a:link {
 /* Quem Apoiamos */
 .title-quemApoiamos {
   font: 3em/1.2 Georgia, serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .desc_quemApoiamos {
   font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 /* ======================================Media-Queries==================================== */
@@ -816,11 +855,11 @@ a:link {
   }
 
   .squem-card {
-    margin-bottom: 30px
+    margin-bottom: 30px;
   }
 
   .squem-card:last-child {
-    margin-bottom: 0
+    margin-bottom: 0;
   }
 
   .img_quem {
@@ -864,9 +903,7 @@ a:link {
     width: 130px;
     height: 80px;
   }
-
 }
-
 
 @media only screen and (min-width: 600px) {
   .img_quem {
@@ -880,11 +917,10 @@ a:link {
     max-width: 434px;
     max-height: 263px;
   }
-
-
 }
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+}
 
 @media only screen and (min-width: 600px) and (max-width: 991px) {
   .apoie {
@@ -960,7 +996,7 @@ a:link {
     max-width: 430px;
     height: 550px;
     margin-right: 70px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
   }
 
   .btn_donate {
@@ -974,7 +1010,7 @@ a:link {
 
   .bannerSobre_texto {
     padding: 20px 50% 20px 8px;
-    padding-left: calc((100% - 1140px) /2);
+    padding-left: calc((100% - 1140px) / 2);
     position: absolute;
   }
 
@@ -989,7 +1025,7 @@ a:link {
 
   .bannerQuemApoiamos_texto {
     padding: 20px 50% 20px 8px;
-    padding-left: calc((100% - 1140px) /2);
+    padding-left: calc((100% - 1140px) / 2);
     position: absolute;
   }
 
@@ -997,4 +1033,3 @@ a:link {
     font-size: 54px;
   }
 }
-
