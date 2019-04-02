@@ -32,6 +32,111 @@
     <p>Se você busca se tornar um anjo na vida de alguém está no caminho correto , preencha o
       formulário de cadastro e torne a vida de alguém mais feliz.</p>
   </div>
+  <!-- Formulario -->
+  <main id="form_novoAnjo">
+    <div class="container">
+      <div class="page-header">
+        <h3>Informações Pessoais</h3>
+      </div>
+      <form action="/anjo/salvar" method="POST" id="">
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label for="inpNomeUsu">Nome</label>
+            <input type="text" class="form-control" id="inpNomeUsu" name="nome" placeholder="Nome"
+              maxlength="15" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inpSobrenomeUsu">Sobrenome</label>
+            <input type="text" class="form-control" id="inpSobrenomeUsu" name="sobrenome"
+              placeholder="Sobrenome" maxlength="15" required>
+          </div>
+          <label>Sexo</label>
+          <div class="radio form-group col-md-4">
+            <label>
+              <input type="radio" name="sexo" value="F"> Feminino
+            </label>
+            <label>
+              <input type="radio" name="sexo" value="M"> Masculino
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-2">
+            <label for="inpNascimentoUsu">Nascimento</label>
+            <input type="date" class="form-control" id="inpNascimentoUsu" name="nascimento"
+              placeholder="DD/MM/AAAA" maxlength="8" required>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inpTelefoneUsu">Telefone</label>
+            <input type="text" class="form-control" id="inpTelefoneUsu" name="telefone"
+              placeholder="(DD)00000-0000" maxlength="14" required>
+          </div>
+        </div>
+        <div class="page-header">
+          <h3>Informações para login</h3>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label for="inpEmailUsu">E-mail</label>
+            <input type="email" class="form-control" id="inpEmailUsu" name="email"
+              placeholder="exemplo@gmail.com" maxlength="70" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inpUsuUsu">Usuario</label>
+            <input type="text" class="form-control" id="inpUsuUsu" name="usuario"
+              placeholder="usuario" maxlength="20" required>
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inpSenhaUsu">Senha</label>
+            <input type="password" class="form-control" id="inpSenhaUsu" name="senha"
+              placeholder="xxxxxxxxxxx" maxlength="30" required>
+          </div>
+        </div>
+        <div class="page-header">
+          <h3>Endereço</h3>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-2">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" id="cep" name="cep"
+                  placeholder="00000000" maxlength="8" required>
+              </div>
+          <div class="form-group col-md-1">
+            <label for="state">Estado</label>
+            <input type="text" class="form-control" id="state" name="state"
+                  placeholder="xx" maxlength="2" required disabled>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="city">Cidade</label>
+            <input type="text" class="form-control" id="city" name="city"
+                  placeholder="xxxxxxxx" maxlength="" required disabled>
+          </div>
+          <div class="form-group col-md-5">
+            <label for="street">Nome</label>
+            <input type="text" class="form-control" id="street" name="street"
+              placeholder="Endereço" maxlength="100" required disabled>
+          </div>
+          <div class="form-group col-md-1">
+            <label for="inpNumber">Numero</label>
+            <input type="text" class="form-control" id="inpNumber" name="numero"
+              placeholder="0000" maxlength="4" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-2">
+            <label for="inpComplementoUsu">Complemento</label>
+            <input type="text" class="form-control" id="inpComplementoUsu" name="complemento"
+              placeholder="Apartamento, Bloco ..." maxlength="20">
+          </div>
+        </div>
+        <div class="row form-group col-sm-12">
+          <button type="submit" class="btn btn-primary" value="enviar">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+
   <!-- Footer -->
   <%- include('rodape'); %>
   <!-- /Footer -->

@@ -733,7 +733,10 @@ a:link {
   color: #555;
   font: 1.3em/1.8 Georgia, serif;
   letter-spacing: .5px;
-  /* width: 85%; */
+}
+
+#form_novoAnjo{
+  margin-bottom: 30px;
 }
 /* =======================TELA NOVO EVENTO=====================*/
 
