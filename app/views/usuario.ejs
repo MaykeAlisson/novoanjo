@@ -16,7 +16,7 @@
     <!-- CSS -->
     <link href="/css/main.css" rel="stylesheet" />
 
-    <title>Novo Evento | Novo Anjo</title>
+    <title>Usuário | Novo Anjo</title>
   </head>
 
   <body>
@@ -26,11 +26,41 @@
     <main>
       <!-- Novo Evento -->
       <div class="container-fluid">
-        <header class="headEventos">
+        <header class="head-perfil">
           <h2 class="title">
             Seu perfil
           </h2>
+          <button type="button" class="btn" data-toggle="modal" data-target="#mensagensDoSistema">
+            Mensagens do sistema (1)
+          </button>
         </header>
+        <div
+          class="modal fade"
+          id="mensagensDoSistema"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="mensagensDoSistemaLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="mensagensDoSistemaLabel">Mensagens do sistema (1)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <ul>
+                  <li>Mensagem de teste do sistema</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <section class="perfil-usuario">
           <!-- Form Perfil do Usuário -->
           <div class="row">
@@ -80,6 +110,22 @@
                       type="text"
                       value="<%=usuario.telefone%>"
                     />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-check">
+                    <label for="anjo" class="col-lg-3 control-label">Anjo:</label>
+                    <div class="col-md-2 form-check">
+                      <input id="anjo" class="form-check-input" type="checkbox" <%= usuario.anjo ?
+                      'checked' : '' %> />
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <label for="beneficiario" class="col-lg-3 control-label">Beneficiario:</label>
+                    <div class="col-md-2 form-check">
+                      <input id="beneficiario" class="form-check-input" type="checkbox" <%=
+                      usuario.beneficiario ? 'checked' : '' %>
+                    </div>
                   </div>
                 </div>
               </form>
