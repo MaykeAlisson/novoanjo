@@ -7,7 +7,8 @@ var mockUsuarios = [
     telefone: '2422453789',
     organizacao: null,
     anjo: true,
-    beneficiario: false
+    beneficiario: false,
+    depoimento: null
   }
 ];
 
