@@ -721,14 +721,13 @@ a:link {
   display: table;
 }
 .imagem-carta{
-  width: 180px;
-  height: 180px;  
+  
 }
 .carta{
   margin: 0 auto;
   position: relative;
   margin-top: 20%;
-  text-align: center;
+  text-align: left;
 }
 
 .formularioContato {
