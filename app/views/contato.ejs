@@ -25,36 +25,46 @@
   <!-- /Menu -->
 
   <main>
-  <!-- Capa -->
-    <div class="bannerContato">
-      <div class="bannerContato_texto">
-        <h2 class="texto_bannerContato">Entre em contato conosco</h2>
-      </div>
-    </div>
-      <!-- /Capa -->
 
       <div class="container">
         <header class="headEventos">
           <h2 class="title">Contato</h2>
         </header>
-      </div>
+      </div>     
 
-      <!-- Formulário -->
-      <div class="formularioContato">
-        <form name="" action="" method="POST">  
-
-          <p><input type="text"  class="input-formulario" name="nome" placeholder="Nome" required="required"></p>
-          <p><input type="email" class="input-formulario" name="email" placeholder="Email"></p>
-          <p><input type="text"  class="input-formulario" name="telefone" placeholder="Telefone de contato" required="required"></p>
-          <p><input type="text"  class="input-formulario" name="assunto" placeholder="Assunto" required="required"></p>
-          <p><textarea class="input-formulario-mensagem" name="mensagem" class="" rows="4" cols="50" placeholder="Deixe sua mensagem."></textarea></p>
-            
-          <div id="btn-enviar">
-           <p><input type="submit" class="btn-enviar" name="enviar" value="Enviar" onclick=""></p>  
-          </div>                 
-        </form>      
-      </div>      
-      <!-- /Formulário -->
+      <div class="container">    
+          <div class="listaPerguntas">
+            <div class="col-md-6 pergunta">
+              <p class="carta">
+               <img class="imagem-carta" src="/img/carta.png">
+              </p>
+            </div>
+            <div class="col-md-6 pergunta">
+              <p>
+                  <form class="formularioContato">
+                      <div class="form-group">    
+                        <p><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome"></p>      
+                        <br> 
+                        <p><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@exemplo.com"></p>
+                        <br>
+                        <p><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Telefone de contato"></p>         
+                        <br>
+                        <p><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Assunto"><p>                
+                      </div>   
+                      <br> 
+                      <div class="form-group">          
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Deixe sua mensagem."></textarea>
+                      </div>     
+                      <br>
+                      <div id="btn-enviar">          
+                        <p><button class="btn btn-primary" type="submit">Enviar</button></p>  
+                      </div>   
+                    </form>
+              </p>
+            </div>
+          </div>
+        </div>
+      
 
       <div class="container">
         <header class="headEventos">          
@@ -64,11 +74,9 @@
             <li><a class="rede-in" href="http://instagram.com" target="blank"><i class="fab col fa-instagram" aria-hidden="true"></i></a></li>
             <li><a class="rede-what" href="http://web.whatsapp.com" target="blank"><i class="fab col fa-whatsapp" aria-hidden="true"></i></a></li>
             <li><a class="rede-twt" href="http://twitter.com" target="blank"><i class="fab col fa-twitter" aria-hidden="true"></i></a></li>          
-           <!-- <li><a href="http://twitter.com" target="blank"><i  class="fab col fa-twitter" aria-hidden="true"></i></a></li>          -->
           </ul>
       </div>       
-
-      
+    </div>      
   </main>
 
    <!-- Rodape -->
