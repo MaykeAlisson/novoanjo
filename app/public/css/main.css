@@ -720,9 +720,7 @@ a:link {
   position: relative;
   display: table;
 }
-.imagem-carta{
-  
-}
+
 .carta{
   margin: 0 auto;
   position: relative;
@@ -811,8 +809,35 @@ a:link {
 
 
 /* =======================TELA CADASTRO=====================*/
+/* =======================TELA NOVO ANJO=====================*/
+.novoAnjo_desc{
+  text-align: center;
+}
 
-/* =======================TELA EVENTOS=====================*/
+.title_novoAnjo{
+  color: #2c3239;
+  text-align: center;
+}
+
+.novoAnjo_desc hr{
+  margin: 20px auto;
+  border: none;
+  width: 150px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: #1b9897;
+}
+
+.novoAnjo_desc p{
+  color: #555;
+  font: 1.3em/1.8 Georgia, serif;
+  letter-spacing: .5px;
+}
+
+#form_novoAnjo{
+  margin-bottom: 30px;
+}
+/* =======================TELA NOVO EVENTO=====================*/
 
 
 /* =======================TELA DASHBOARD=====================*/
@@ -893,6 +918,11 @@ a:link {
 
 .desc_quemApoiamos {
   font: 1.4em/1.88 Montserrat-Regular, Helvetica, Arial, sans-serif;
+  letter-spacing: .5px;
+}
+
+.title_novoAnjo{
+  font: 3em/1.2 Georgia, serif;
   letter-spacing: .5px;
 }
 
