@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- Fontawesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
+  <!-- CSS -->
+  <link href="/css/main.css" rel="stylesheet">
+
+  <title>Contato | Novo Anjo</title>
+</head>
+
+<body>
+  <!-- Menu -->
+  <%- include('menu'); %>
+  <!-- /Menu -->
+
+  <main>
+
+      <div class="container">
+        <header class="headEventos">
+          <h2 class="title">Contato</h2>
+        </header>
+      </div>     
+
+      <div class="container">    
+          <div class="listaPerguntas">
+            <div class="col-md-6 pergunta">
+              <p class="carta">
+               <img class="imagem-carta" src="/img/carta.png">
+              </p>
+            </div>
+            <div class="col-md-6 pergunta">
+              <p>
+                  <form class="formularioContato">
+                      <div class="form-group">    
+                        <p><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nome"></p>      
+                        <br> 
+                        <p><input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@exemplo.com"></p>
+                        <br>
+                        <p><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Telefone de contato"></p>         
+                        <br>
+                        <p><input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Assunto"><p>                
+                      </div>   
+                      <br> 
+                      <div class="form-group">          
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Deixe sua mensagem."></textarea>
+                      </div>     
+                      <br>
+                      <div id="btn-enviar">          
+                        <p><button class="btn btn-primary" type="submit">Enviar</button></p>  
+                      </div>   
+                    </form>
+              </p>
+            </div>
+          </div>
+        </div>
+      
+
+      <div class="container">
+        <header class="headEventos">          
+        </header>
+        <ul class="rede-social">
+            <li><a class="rede-fa" href="http://www.facebook.com" target="blank"><i class="fab col fa-facebook-f" aria-hidden="true"></i></a></li>
+            <li><a class="rede-in" href="http://instagram.com" target="blank"><i class="fab col fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a class="rede-what" href="http://web.whatsapp.com" target="blank"><i class="fab col fa-whatsapp" aria-hidden="true"></i></a></li>
+            <li><a class="rede-twt" href="http://twitter.com" target="blank"><i class="fab col fa-twitter" aria-hidden="true"></i></a></li>          
+          </ul>
+      </div>       
+    </div>      
+  </main>
+
+   <!-- Rodape -->
+   <%- include('rodape'); %>
+   <!-- /Rodape -->
+
+    <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src='/js/main.js'></script>
+</body>
+
+</html>
