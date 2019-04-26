@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
+  <!-- CSS -->
+  <link href="/css/main.css" rel="stylesheet">
+
+  <title>Quero Ajuda | Novo Anjo</title>
+</head>
+
+<body>
+    <!-- Menu -->
+    <%- include('menu'); %>
+    <!-- /Menu -->
+    <main>
+      <!-- Quero Ajuda -->
+      <div class="container-fluid">
+        <header class="headEventos">
+          <h2 class="title">
+            Quero Ajuda
+          </h2>
+        </header>
+        <section>
+          <!-- Form Novo Evento -->
+          <form action="/quero-ajuda" method="POST">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input
+                  type="text"
+                  name="nome"
+                  class="form-control"
+                  id="nome"
+                  placeholder="Digite seu nome"
+                />
+              </div>
+              <div class="form-group col-md-6">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="e-mail@exemplo.org"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-3">
+                <label for="tel">Telefone de contato</label>
+                <input type="text" name="tel" class="form-control" id="tel" placeholder="Telefone com DDD (apenas números)"/>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="form-group col-md-2">
+                <label for="necessidade">Necessidade / Modalidade</label>
+                <select name="necessidade" class="form-control">
+                  <option>Agasalhos</option>
+                  <option>Alimentos</option>
+                  <option>Calçados</option>
+                  <option>Roupas</option>
+                  <option>Tempo</option>
+                  <option>Médicos</option>
+                  <option>Advogados</option>
+                  <option>Psicólogos</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="detalhes">Detalhes</label>
+                <textarea class="form-control" name="detalhes" rows="6" cols="50" placeholder="Fale mais sobre como podemos te ajudar"></textarea>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary button">Solicitar Ajuda</button>
+              </div>
+            </div>
+            
+          </form>
+          <!-- /Form Novo Evento -->
+        </section>
+      </div>
+      <!-- Eventos -->
+    </main>
+
+    <!-- Footer -->
+    <%- include('rodape'); %>
+    <!-- /Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+  </body>
+</html>
