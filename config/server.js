@@ -6,11 +6,6 @@ var bodyParser = require('body-parser');
 // Iniciando express na var app
 var app = express();
 
-// Definindo View engine
-app.set('view engine', 'ejs');
-// Definindo local de views
-app.set('views', './app/views');
-
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
