@@ -1,10 +1,10 @@
 // Importado modulos
-var express = require('express');
-var consign = require('consign'); // Auto load
-var bodyParser = require('body-parser');
+const express = require('express');
+const consign = require('consign'); // Auto load
+const bodyParser = require('body-parser');
 
 // Iniciando express na var app
-var app = express();
+const app = express();
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));

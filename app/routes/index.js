@@ -4,4 +4,4 @@ module.exports = function (app) {
     // Envoca metodo home na classe controllers index
     app.app.controllers.index.home(app, req, res);
   });
-}
+};
