@@ -19,7 +19,7 @@ app.use(express.static('./app/public'));
 consign()
   .include('./app/routes')
   .then('./config/connectionFactory.js')
-  .then('./app/models')
+  .then('./app/model')
   .then('./app/controllers')
   .into(app);
 

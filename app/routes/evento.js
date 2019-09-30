@@ -4,4 +4,4 @@ module.exports = function(app){
         // Envoca o metodo contato na classe contato
         app.app.controllers.contato.contato(app, req, res);
     });
-}
+};
