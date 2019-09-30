@@ -1,98 +1,83 @@
 -- CREATED
 
 DROP DATABASE novoanjo;
-CREATE DATABASE novoanjo;
-USE novoanjo;
+create database novoanjo
+DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
+use novoanjo;
 
-CREATE TABLE usuario(
-id bigint not null primary key auto_increment,
+create table usuario(
+id_usuario bigint not null auto_increment primary key,
 nome varchar(50) not null,
-sobrenome varchar(50) not null,
 sexo enum('M','F') not null,
 nascimento date not null,
-criacao datetime default current_timestamp
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
+criacao datetime not null default CURRENT_TIMESTAMP,
+id_perfil bigint not null,
+id_servico bigint not null
+)default charset = utf8;
 
-CREATE TABLE perfil(
-id bigint not null primary key auto_increment,
-tipo enum('A','U','P','E') not null default 'U',
-id_usuario bigint not null
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
-
-
-CREATE TABLE login(
-id bigint not null primary key auto_increment,
+create table login(
+id_login bigint not null auto_increment primary key,
 email varchar(100) not null unique,
-usuario varchar(50) not null unique,
-senha varchar(50) not null,
-id_usuario bigint unique
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
+senha varchar(100) not null,
+id_usuario bigint unique not null
+)default charset = utf8;
 
-
-CREATE TABLE categoria(
-id bigint not null primary key auto_increment,
-nome varchar(50) not null
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
-
-CREATE TABLE evento(
-id bigint not null primary key auto_increment,
-nome varchar(100) not null,
-responsavel varchar(100) not null,
-descricao text not null,
-dia date not null,
-id_categoria bigint not null,
-id_usuario bigint
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
-
-
-CREATE TABLE telefone(
-id bigint not null primary key auto_increment,
-numero varchar(15) not null,
-id_usuario bigint,
-id_ong bigint ,
-id_evento bigint
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
-
-
-CREATE TABLE endereco(
-id bigint not null primary key auto_increment,
-tipo enum('AV','Rua','Alameda') not null,
-endereco varchar(200) not null,
-cep varchar(9) not null,
-numero int not null,
-complemento varchar(50) not null default '-',
-id_usuario bigint,
-id_evento bigint,
-id_ong bigint
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
-
-CREATE TABLE ong(
-id bigint not null primary key auto_increment,
-nome varchar(100) not null,
-descricao text not null,
+create table evento(
+id_evento bigint not null auto_increment primary key,
+responsavel varchar(70) not null,
+data_evento date not null,
+hora_evento time not null,
+status enum('APROVADO', 'PENDENTE') not null,
+criacao datetime not null default CURRENT_TIMESTAMP,
 id_telefone bigint not null,
-id_endereco bigint not null
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
+id_endereco bigint not null,
+id_servico bigint not null
+)default charset = utf8;
 
-CREATE TABLE doacao(
-id bigint not null primary key auto_increment,
-id_categoria bigint not null,
-recorrente boolean not null,
-descricao text,
-melhor_dia varchar(2) not null,
-melhor_hora varchar(5) not null,
+create table endereco(
+id_endereco bigint not null auto_increment primary key,
+estado char(2) not null,
+cidade varchar(50) not null,
+vizinhanca varchar(50) not null,
+rua varchar (120) not null,
+numero int not null,
+complemento varchar(30),
+id_usuario bigint unique
+)default charset = utf8;
+
+create table telefone(
+id_telefone bigint not null auto_increment primary key,
+numero VARCHAR(20) not null,
+id_usuario bigint,
+id_evento bigint
+)default charset = utf8;
+
+create table perfil(
+id_perfil bigint not null auto_increment primary key,
+tipo enum('ANJO', 'ACOLHIDO', 'ADMIN', 'MASTER')
+)default charset = utf8;
+
+create table servico(
+id_servico bigint not null auto_increment primary key,
+nome varchar(70) not null
+)default charset = utf8;
+
+create table gratidao(
+id_gratidao bigint not null auto_increment primary key,
+mensagem varchar(180) not null,
+criacao datetime not null default CURRENT_TIMESTAMP,
 id_usuario bigint not null
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
+)default charset = utf8;
 
+create table mensagem(
+id_mensagem bigint not null auto_increment primary key,
+texto varchar(200) not null,
+data_fim date not null,
+criacao datetime default CURRENT_TIMESTAMP,
+id_usuario_responsavel bigint not null
+)default charset = utf8;
 
-CREATE TABLE auditoria(
-id bigint not null primary key auto_increment,
-estado_old varchar(150) not null,
-estado_new varchar(150) not null,
-ocorrido datetime default current_timestamp,
-id_usuario bigint not null
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
 
 ALTER TABLE usuario ENGINE=INNODB;
 ALTER TABLE perfil ENGINE=INNODB;
