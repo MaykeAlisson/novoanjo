@@ -80,32 +80,29 @@ id_usuario_responsavel bigint not null
 
 
 ALTER TABLE usuario ENGINE=INNODB;
-ALTER TABLE perfil ENGINE=INNODB;
 ALTER TABLE login ENGINE=INNODB;
-ALTER TABLE categoria ENGINE=INNODB;
 ALTER TABLE evento ENGINE=INNODB;
-ALTER TABLE telefone ENGINE=INNODB;
 ALTER TABLE endereco ENGINE=INNODB;
-ALTER TABLE ong ENGINE=INNODB;
-ALTER TABLE doacao ENGINE=INNODB;
+ALTER TABLE telefone ENGINE=INNODB;
+ALTER TABLE perfil ENGINE=INNODB;
+ALTER TABLE servico ENGINE=INNODB;
+ALTER TABLE gratidao ENGINE=INNODB;
+ALTER TABLE mensagem ENGINE=INNODB;
 
 -- CONSTRANT
 
-ALTER TABLE perfil ADD CONSTRAINT id_fk_usuarioP FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE login ADD CONSTRAINT id_fk_usuarioL FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE evento ADD CONSTRAINT id_fk_categoriaE FOREIGN KEY(id_categoria) REFERENCES categoria(id);
-ALTER TABLE evento ADD CONSTRAINT id_fk_usuarioE FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE telefone ADD CONSTRAINT id_fk_usuarioT FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE telefone ADD CONSTRAINT id_fk_ongT FOREIGN KEY(id_ong) REFERENCES ong(id);
-ALTER TABLE telefone ADD CONSTRAINT id_fk_eventoT FOREIGN KEY(id_evento) REFERENCES evento(id);
-ALTER TABLE endereco ADD CONSTRAINT id_fk_eventoEn FOREIGN KEY(id_evento) REFERENCES evento(id);
-ALTER TABLE endereco ADD CONSTRAINT id_fk_usuarioEn FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE endereco ADD CONSTRAINT id_fk_ongEn FOREIGN KEY(id_ong) REFERENCES ong(id);
-ALTER TABLE ong ADD CONSTRAINT id_fk_telefoneO FOREIGN KEY(id_telefone) REFERENCES telefone(id);
-ALTER TABLE ong ADD CONSTRAINT id_fk_enderecoO FOREIGN KEY(id_endereco) REFERENCES endereco(id);
-ALTER TABLE doacao ADD CONSTRAINT id_fk_categoriaD FOREIGN KEY(id_categoria) REFERENCES categoria(id);
-ALTER TABLE doacao ADD CONSTRAINT id_fk_usuarioD FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE auditoria ADD CONSTRAINT id_fk_usuarioA FOREIGN KEY(id_usuario) REFERENCES usuario(id);
+ALTER TABLE usuario ADD CONSTRAINT id_fk_perfil_usuario FOREIGN KEY(id_perfil) REFERENCES perfil(id_perfil);
+ALTER TABLE usuario ADD CONSTRAINT id_fk_servico_usuario FOREIGN KEY(id_servico) REFERENCES servico(id_servico);
+ALTER TABLE login ADD CONSTRAINT id_fk_usuario_login FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario);
+ALTER TABLE evento ADD CONSTRAINT id_fk_telefone_evento FOREIGN KEY(id_telefone) REFERENCES telefone(id_telefone);
+ALTER TABLE evento ADD CONSTRAINT id_fk_endereco_evento FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco);
+ALTER TABLE evento ADD CONSTRAINT id_fk_servico_evento FOREIGN KEY(id_servico) REFERENCES servico(id_servico);
+ALTER TABLE endereco ADD CONSTRAINT id_fk_usuario_endereco FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario);
+ALTER TABLE telefone ADD CONSTRAINT id_fk_usuario_telefone FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario);
+ALTER TABLE telefone ADD CONSTRAINT id_fk_evento_telefone FOREIGN KEY(id_evento) REFERENCES evento(id_evento);
+ALTER TABLE gratidao ADD CONSTRAINT id_fk_usuario_gratidao FOREIGN KEY(id_gratidao) REFERENCES gratidao(id_gratidao);
+ALTER TABLE mensagem ADD CONSTRAINT id_fk_usuario_mensagem FOREIGN KEY(id_usuario_responsavel) REFERENCES usuario(id_usuario);
+
 
 -- SELECT
 
