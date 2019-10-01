@@ -20,7 +20,8 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "consign": "^0.1.6",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mysql": "^2.17.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
