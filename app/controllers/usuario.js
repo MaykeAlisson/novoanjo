@@ -91,6 +91,31 @@ module.exports = {
     const dados = app.app.model.usuario.perfil(req);
 
     res.json(dados);
+  },
+
+  login(app, req, res){
+
+    const usuario = app.app.model.usuario.login(req);
+
+    if (usuario === null){
+      res.json({
+        success: false,
+        message: 'Autenticação do Usuário falhou. E-mail ou Senha incorreta!'
+      });
+    }else{
+      // const token = app.app.jwt.token(usuario);
+      require("dotenv-safe").config();
+      const jwt = require('jsonwebtoken');
+
+
+      const token = jwt.sign({usuario}, process.env.SECRET, {
+        expiresIn: 300
+      });
+
+      res.json(token);
+    }
+
+
   }
 
 };

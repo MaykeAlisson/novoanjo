@@ -12,4 +12,7 @@ module.exports = function(app) {
     app.app.controllers.usuario.perfil(app, req, res);
   });
 
+  app.post('/api/v1/usuario/login', function (req, res) {
+    app.app.controllers.usuario.login(app, req, res);
+  });
 };

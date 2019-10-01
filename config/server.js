@@ -2,8 +2,6 @@
 const express = require('express');
 const consign = require('consign'); // Auto load
 const bodyParser = require('body-parser');
-const env = require("dotenv-safe").config();
-const jwt = require('jsonwebtoken');
 
 // Iniciando express na var app
 const app = express();

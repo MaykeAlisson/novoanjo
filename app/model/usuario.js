@@ -16,6 +16,16 @@ module.exports = {
     };
 
     return dados;
+  },
+
+  login(req){
+    const dadosUsuario = {
+      id: 1,
+      nome: 'Mayke Alisson',
+      id_perfil: 3
+    };
+
+    return dadosUsuario;
   }
 
 };
