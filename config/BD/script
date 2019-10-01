@@ -1,126 +1,108 @@
 -- CREATED
 
 DROP DATABASE novoanjo;
-CREATE DATABASE novoanjo;
-USE novoanjo;
+create database novoanjo
+DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
+use novoanjo;
 
-CREATE TABLE usuario(
-id bigint not null primary key auto_increment,
+create table usuario(
+id_usuario bigint not null auto_increment primary key,
 nome varchar(50) not null,
-sobrenome varchar(50) not null,
 sexo enum('M','F') not null,
 nascimento date not null,
-criacao datetime default current_timestamp
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
+criacao datetime not null default CURRENT_TIMESTAMP,
+id_perfil bigint not null,
+id_servico bigint not null
+)default charset = utf8;
 
-CREATE TABLE perfil(
-id bigint not null primary key auto_increment,
-tipo enum('A','U','P','E') not null default 'U',
-id_usuario bigint not null
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
-
-
-CREATE TABLE login(
-id bigint not null primary key auto_increment,
+create table login(
+id_login bigint not null auto_increment primary key,
 email varchar(100) not null unique,
-usuario varchar(50) not null unique,
-senha varchar(50) not null,
-id_usuario bigint unique
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
+senha varchar(100) not null,
+id_usuario bigint unique not null
+)default charset = utf8;
 
-
-CREATE TABLE categoria(
-id bigint not null primary key auto_increment,
-nome varchar(50) not null
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
-
-CREATE TABLE evento(
-id bigint not null primary key auto_increment,
-nome varchar(100) not null,
-responsavel varchar(100) not null,
-descricao text not null,
-dia date not null,
-id_categoria bigint not null,
-id_usuario bigint
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
-
-
-CREATE TABLE telefone(
-id bigint not null primary key auto_increment,
-numero varchar(15) not null,
-id_usuario bigint,
-id_ong bigint ,
-id_evento bigint
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
-
-
-CREATE TABLE endereco(
-id bigint not null primary key auto_increment,
-tipo enum('AV','Rua','Alameda') not null,
-endereco varchar(200) not null,
-cep varchar(9) not null,
-numero int not null,
-complemento varchar(50) not null default '-',
-id_usuario bigint,
-id_evento bigint,
-id_ong bigint
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
-
-CREATE TABLE ong(
-id bigint not null primary key auto_increment,
-nome varchar(100) not null,
-descricao text not null,
+create table evento(
+id_evento bigint not null auto_increment primary key,
+responsavel varchar(70) not null,
+data_evento date not null,
+hora_evento time not null,
+status enum('APROVADO', 'PENDENTE') not null,
+criacao datetime not null default CURRENT_TIMESTAMP,
 id_telefone bigint not null,
-id_endereco bigint not null
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
+id_endereco bigint not null,
+id_servico bigint not null
+)default charset = utf8;
 
-CREATE TABLE doacao(
-id bigint not null primary key auto_increment,
-id_categoria bigint not null,
-recorrente boolean not null,
-descricao text,
-melhor_dia varchar(2) not null,
-melhor_hora varchar(5) not null,
+create table endereco(
+id_endereco bigint not null auto_increment primary key,
+estado char(2) not null,
+cidade varchar(50) not null,
+vizinhanca varchar(50) not null,
+rua varchar (120) not null,
+numero int not null,
+complemento varchar(30),
+id_usuario bigint unique
+)default charset = utf8;
+
+create table telefone(
+id_telefone bigint not null auto_increment primary key,
+numero VARCHAR(20) not null,
+id_usuario bigint,
+id_evento bigint
+)default charset = utf8;
+
+create table perfil(
+id_perfil bigint not null auto_increment primary key,
+tipo enum('ANJO', 'ACOLHIDO', 'ADMIN', 'MASTER')
+)default charset = utf8;
+
+create table servico(
+id_servico bigint not null auto_increment primary key,
+nome varchar(70) not null
+)default charset = utf8;
+
+create table gratidao(
+id_gratidao bigint not null auto_increment primary key,
+mensagem varchar(180) not null,
+criacao datetime not null default CURRENT_TIMESTAMP,
 id_usuario bigint not null
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
+)default charset = utf8;
 
+create table mensagem(
+id_mensagem bigint not null auto_increment primary key,
+texto varchar(200) not null,
+data_fim date not null,
+criacao datetime default CURRENT_TIMESTAMP,
+id_usuario_responsavel bigint not null
+)default charset = utf8;
 
-CREATE TABLE auditoria(
-id bigint not null primary key auto_increment,
-estado_old varchar(150) not null,
-estado_new varchar(150) not null,
-ocorrido datetime default current_timestamp,
-id_usuario bigint not null
-)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
 
 ALTER TABLE usuario ENGINE=INNODB;
-ALTER TABLE perfil ENGINE=INNODB;
 ALTER TABLE login ENGINE=INNODB;
-ALTER TABLE categoria ENGINE=INNODB;
 ALTER TABLE evento ENGINE=INNODB;
-ALTER TABLE telefone ENGINE=INNODB;
 ALTER TABLE endereco ENGINE=INNODB;
-ALTER TABLE ong ENGINE=INNODB;
-ALTER TABLE doacao ENGINE=INNODB;
+ALTER TABLE telefone ENGINE=INNODB;
+ALTER TABLE perfil ENGINE=INNODB;
+ALTER TABLE servico ENGINE=INNODB;
+ALTER TABLE gratidao ENGINE=INNODB;
+ALTER TABLE mensagem ENGINE=INNODB;
 
 -- CONSTRANT
 
-ALTER TABLE perfil ADD CONSTRAINT id_fk_usuarioP FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE login ADD CONSTRAINT id_fk_usuarioL FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE evento ADD CONSTRAINT id_fk_categoriaE FOREIGN KEY(id_categoria) REFERENCES categoria(id);
-ALTER TABLE evento ADD CONSTRAINT id_fk_usuarioE FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE telefone ADD CONSTRAINT id_fk_usuarioT FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE telefone ADD CONSTRAINT id_fk_ongT FOREIGN KEY(id_ong) REFERENCES ong(id);
-ALTER TABLE telefone ADD CONSTRAINT id_fk_eventoT FOREIGN KEY(id_evento) REFERENCES evento(id);
-ALTER TABLE endereco ADD CONSTRAINT id_fk_eventoEn FOREIGN KEY(id_evento) REFERENCES evento(id);
-ALTER TABLE endereco ADD CONSTRAINT id_fk_usuarioEn FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE endereco ADD CONSTRAINT id_fk_ongEn FOREIGN KEY(id_ong) REFERENCES ong(id);
-ALTER TABLE ong ADD CONSTRAINT id_fk_telefoneO FOREIGN KEY(id_telefone) REFERENCES telefone(id);
-ALTER TABLE ong ADD CONSTRAINT id_fk_enderecoO FOREIGN KEY(id_endereco) REFERENCES endereco(id);
-ALTER TABLE doacao ADD CONSTRAINT id_fk_categoriaD FOREIGN KEY(id_categoria) REFERENCES categoria(id);
-ALTER TABLE doacao ADD CONSTRAINT id_fk_usuarioD FOREIGN KEY(id_usuario) REFERENCES usuario(id);
-ALTER TABLE auditoria ADD CONSTRAINT id_fk_usuarioA FOREIGN KEY(id_usuario) REFERENCES usuario(id);
+ALTER TABLE usuario ADD CONSTRAINT id_fk_perfil_usuario FOREIGN KEY(id_perfil) REFERENCES perfil(id_perfil);
+ALTER TABLE usuario ADD CONSTRAINT id_fk_servico_usuario FOREIGN KEY(id_servico) REFERENCES servico(id_servico);
+ALTER TABLE login ADD CONSTRAINT id_fk_usuario_login FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario);
+ALTER TABLE evento ADD CONSTRAINT id_fk_telefone_evento FOREIGN KEY(id_telefone) REFERENCES telefone(id_telefone);
+ALTER TABLE evento ADD CONSTRAINT id_fk_endereco_evento FOREIGN KEY(id_endereco) REFERENCES endereco(id_endereco);
+ALTER TABLE evento ADD CONSTRAINT id_fk_servico_evento FOREIGN KEY(id_servico) REFERENCES servico(id_servico);
+ALTER TABLE endereco ADD CONSTRAINT id_fk_usuario_endereco FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario);
+ALTER TABLE telefone ADD CONSTRAINT id_fk_usuario_telefone FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario);
+ALTER TABLE telefone ADD CONSTRAINT id_fk_evento_telefone FOREIGN KEY(id_evento) REFERENCES evento(id_evento);
+ALTER TABLE gratidao ADD CONSTRAINT id_fk_usuario_gratidao FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario);
+ALTER TABLE mensagem ADD CONSTRAINT id_fk_usuario_mensagem FOREIGN KEY(id_usuario_responsavel) REFERENCES usuario(id_usuario);
+
 
 -- SELECT
 

@@ -3,5 +3,5 @@ module.exports = function(app){
     app.get('/quero-ajuda', function(req, res){
         // envoca o metodo eventos na classe eventos
         app.app.controllers.queroAjuda.queroAjuda(app, req, res);
-    });  
-}
+    });
+};

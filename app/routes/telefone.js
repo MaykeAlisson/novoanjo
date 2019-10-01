@@ -9,4 +9,4 @@ module.exports = function(app){
   app.post('/novoanjo/cadastro', function(req, res){
     app.app.controllers.novoAnjo.cadatro(app, req, res);
   });
-}
+};
