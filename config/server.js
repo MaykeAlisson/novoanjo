@@ -2,6 +2,8 @@
 const express = require('express');
 const consign = require('consign'); // Auto load
 const bodyParser = require('body-parser');
+const env = require("dotenv-safe").config();
+const jwt = require('jsonwebtoken');
 
 // Iniciando express na var app
 const app = express();
@@ -15,7 +17,7 @@ app.use(bodyParser.json());
 // Definindo arquivos staticos
 app.use(express.static('./app/public'));
 
-// Definindo auto-load do Consign
+// Definindo auto-load do Consign (inject no app)
 consign()
   .include('./app/routes')
   .then('./config/connectionFactory.js')
