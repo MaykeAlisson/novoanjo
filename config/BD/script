@@ -100,7 +100,7 @@ ALTER TABLE evento ADD CONSTRAINT id_fk_servico_evento FOREIGN KEY(id_servico) R
 ALTER TABLE endereco ADD CONSTRAINT id_fk_usuario_endereco FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario);
 ALTER TABLE telefone ADD CONSTRAINT id_fk_usuario_telefone FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario);
 ALTER TABLE telefone ADD CONSTRAINT id_fk_evento_telefone FOREIGN KEY(id_evento) REFERENCES evento(id_evento);
-ALTER TABLE gratidao ADD CONSTRAINT id_fk_usuario_gratidao FOREIGN KEY(id_gratidao) REFERENCES gratidao(id_gratidao);
+ALTER TABLE gratidao ADD CONSTRAINT id_fk_usuario_gratidao FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario);
 ALTER TABLE mensagem ADD CONSTRAINT id_fk_usuario_mensagem FOREIGN KEY(id_usuario_responsavel) REFERENCES usuario(id_usuario);
 
 
