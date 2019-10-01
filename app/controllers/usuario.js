@@ -103,11 +103,8 @@ module.exports = {
         message: 'Autenticação do Usuário falhou. E-mail ou Senha incorreta!'
       });
     }else{
-      // const token = app.app.jwt.token(usuario);
       require("dotenv-safe").config();
       const jwt = require('jsonwebtoken');
-
-
       const token = jwt.sign({usuario}, process.env.SECRET, {
         expiresIn: 300
       });
