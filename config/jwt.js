@@ -2,7 +2,7 @@ module.exports = {
 
   verifyJWT(req, res, next){
     const jwt = require('jsonwebtoken');
-    const token = req.headers['x-access-token'];
+    const token = req.headers.authorization.substring(7);
 
     if (!token)
       return res.status(401).send({ auth: false, message: 'Acesso Negado.' });

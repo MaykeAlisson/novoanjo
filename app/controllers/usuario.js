@@ -115,12 +115,11 @@ module.exports = {
       require("dotenv-safe").config();
       const jwt = require('jsonwebtoken');
       const token = jwt.sign({usuario}, process.env.SECRET, {
-        expiresIn: 300
+        expiresIn: '6h'
       });
 
       res.status(200).send(token);
     }
-
 
   }
 

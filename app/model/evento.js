@@ -1,4 +1,4 @@
-modelo.exports = {
+module.exports = {
 
   // CADASTRA EVENTO
 
