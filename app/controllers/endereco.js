@@ -5,4 +5,4 @@ module.exports.index = function(app, req, res){
 
 module.exports.cadastro = function(app, req, res){
   let anjo = req.body;
-}
+};

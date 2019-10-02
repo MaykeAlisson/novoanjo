@@ -1,14 +1,21 @@
 module.exports = {
-  eventos(app, req, res) {
-    // render da pagina
-    res.render('eventos');
+
+  buscaEventos(app, req, res) {
+
+    res.send('Lista Enventos por cidade');
+
   },
-  novoEvento(app, req, res) {
-    // render da pagina
-    res.render('novo-evento');
+
+  cadastra(app, req, res) {
+
+    res.send('Cadastro evento');
+
   },
-  novoEventoRegister(app, req, res) {
-    console.log(req.body);
-    res.redirect('/eventos');
+
+  atualiza(app, req, res) {
+
+    res.send('Atualiza evento ja cadastrado');
+
   }
+
 };

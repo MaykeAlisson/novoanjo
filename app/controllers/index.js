@@ -1,3 +1,3 @@
 module.exports.home = function(app, req, res){
-    res.send('index');
+    res.status(200).send('index');
 };

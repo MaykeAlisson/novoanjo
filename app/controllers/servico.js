@@ -2,9 +2,9 @@ module.exports = {
 
   servico(app, req, res){
     try {
-      res.json(app.app.model.servico.servico());
+      res.status(200).json(app.app.model.servico.servico());
     }catch (e) {
-      res.json(e)
+      res.status(500).json(e)
     }
 
   }

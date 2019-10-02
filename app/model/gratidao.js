@@ -1,0 +1,13 @@
+modelo.exports = {
+
+  // CADASTRA GRATIDAO
+
+  // ATUALIZA GRATIDAO
+
+  // DELETA GRATIDAO
+
+  // LISTA TODAS GRATIDAO
+
+  // GRATIDAO POR USUARIO
+
+};
