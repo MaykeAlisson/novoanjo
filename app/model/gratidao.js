@@ -1,13 +1,27 @@
 module.exports = {
 
-  // CADASTRA GRATIDAO
+  cadastro(gratidao){
+    // cadastra gratidao
+  },
 
-  // ATUALIZA GRATIDAO
+  gratidao(){
+    const gratidao = [];
 
-  // DELETA GRATIDAO
+    return gratidao;
+  },
 
-  // LISTA TODAS GRATIDAO
+  atualiza(gratidao){
+    // atualiza gratidao
+  },
 
-  // GRATIDAO POR USUARIO
+  deleta(idGratidao){
+    // deleta gratidao
+  },
+
+  buscaPorUsuario(idUsuario){
+    const gratidao = [];
+
+    return gratidao;
+  }
 
 };

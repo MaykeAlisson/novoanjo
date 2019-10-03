@@ -92,10 +92,8 @@ module.exports = {
       error: 'Area Restrita'
     };
 
-    // console.log(req);
-
-    // if(req.userPerfil !== 2)
-    //   res.status(401).json(restrito);
+    if(req.userPerfil !== 2)
+      res.status(401).json(restrito);
 
     const dados = app.app.model.usuario.perfil(req);
 

@@ -1,13 +1,30 @@
 module.exports = {
 
-  // CADASTRA EVENTO
+  buscaEventos(){
+    const eventos = [];
 
-  // ATUALIZA EVENTO
+    return eventos;
+  },
 
-  // DELETA EVENTO
+  cadastro(evento){
+    //cadastra evento
+  },
 
-  // BUSCA POR CIDADE
+  atualiza(evento){
+    // atualiza evento
+  },
 
-  // LISTA AUTOMATICO POR CIDADE DO USUARIO LOGADO
+  buscaEventosNaoLiberado(){
+    // lista eventos nao liberado
+  },
+
+  libera(evento){
+    // libera ou nao evento com o id
+  },
+
+  buscaPorCidade(cidade){
+    // lista evento na cidade do usuario
+  }
+
 
 };
