@@ -12,5 +12,10 @@ module.exports = function(app){
 
   app.get('/api/v1/mensagem', verifyJWT, (req, res, next) => {
     app.app.controllers.mensagem.mensagem(app, req, res, next);
-  })
+  });
+
+  app.get('/api/v1/mensagem/usuario', verifyJWT, (req, res, next) => {
+    app.app.controllers.mensagem.buscaPorUsuario(app, req, res, next);
+  });
+
 };

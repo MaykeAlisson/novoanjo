@@ -49,10 +49,12 @@ module.exports = {
     const idUsuario = req.userId;
 
     try {
-      const mensagem = app.app.model
+      const mensagem = app.app.model.mensagem.buscaPorUsuario(idUsuario);
+      res.status(200).send('lista de mensagem');
     }catch (e) {
       res.status(500).send('erro');
     }
+
   }
 
 

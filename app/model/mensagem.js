@@ -14,10 +14,10 @@ module.exports = {
     return mensagem;
   },
 
-  // ATUALIZA MENSAGEM (SO ADM)
+  buscaPorUsuario(idUsuario){
+    const mensagem = [];
 
-  // LISTA MENSAGEM EM ABERTAS
-
-  // LISTA MENSAGEM POR USUARIO LOGADO
+    return mensagem;
+  }
 
 };
