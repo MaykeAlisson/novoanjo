@@ -6,6 +6,7 @@ module.exports = {
 
   atualiza(endereco){
     console.log(endereco);
+    
   }
 
 };

@@ -98,6 +98,7 @@ module.exports = {
     const dados = app.app.model.usuario.perfil(req);
 
     res.status(200).json(dados);
+    
   },
 
   login(app, req, res){
