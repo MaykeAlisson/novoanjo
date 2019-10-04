@@ -1,6 +1,18 @@
 module.exports = {
 
-  // CADASTRA MENSAGEM (SO ADM)
+  cadastro(mensagem){
+    //nao retorna nada, so erro se hover
+  },
+
+  atualiza(mensagem){
+    //nao retorna nada
+  },
+
+  mensagem(){
+    const mensagem = [];
+
+    return mensagem;
+  },
 
   // ATUALIZA MENSAGEM (SO ADM)
 
