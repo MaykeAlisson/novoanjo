@@ -40,9 +40,9 @@ module.exports = {
       app.app.model.endereco.cadastro(endereco);
       app.app.model.telefone.cadastro(telefone);
       app.app.model.login.cadastro(login);
-      res.redirect('/');
+      res.status(301).redirect('/');
     }catch (e) {
-      res.json(e);
+      res.status(500).json(e);
     }
 
   },
@@ -79,18 +79,27 @@ module.exports = {
       app.app.model.usuario.atualiza(usuario);
       app.app.model.endereco.atualiza(endereco);
       app.app.model.telefone.atualiza(telefone);
-      res.redirect('/api/v1/usuario/perfil');
+      res.status(301).redirect('/api/v1/usuario/perfil');
     }catch (e) {
-      res.json(e)
+      res.status(500).json(e)
     }
 
   },
 
   perfil(app, req, res){
 
+    
+    const restrito = {
+      error: 'Area Restrita'
+    };
+
+    if(req.userPerfil !== 2)
+      res.status(401).json(restrito);
+
     const dados = app.app.model.usuario.perfil(req);
 
-    res.json(dados);
+    res.status(200).json(dados);
+    
   },
 
   login(app, req, res){
@@ -98,7 +107,7 @@ module.exports = {
     const usuario = app.app.model.usuario.login(req);
 
     if (usuario === null){
-      res.json({
+      res.status(500).json({
         success: false,
         message: 'Autenticação do Usuário falhou. E-mail ou Senha incorreta!'
       });
@@ -106,12 +115,11 @@ module.exports = {
       require("dotenv-safe").config();
       const jwt = require('jsonwebtoken');
       const token = jwt.sign({usuario}, process.env.SECRET, {
-        expiresIn: 300
+        expiresIn: '6h'
       });
 
-      res.json(token);
+      res.status(200).send(token);
     }
-
 
   }
 
