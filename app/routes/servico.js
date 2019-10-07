@@ -17,5 +17,5 @@ module.exports = function(app){
   app.delete('/api/v1/servico/delete', verifyJWT, (app, req, res, next) => {
     app.app.controllers.servico.delete(app, req, res, next);
   });
-
+  
 };

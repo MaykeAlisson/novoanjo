@@ -88,6 +88,7 @@ module.exports = {
 
   perfil(app, req, res){
 
+    
     const restrito = {
       error: 'Area Restrita'
     };
