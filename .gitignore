@@ -6,4 +6,4 @@ yarn.lock
 .idea
 config/connectionFactory.js
 .env
-
+package-lock.json
