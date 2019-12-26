@@ -1,3 +1,21 @@
+function EventoDAO(connection) {
+  this._connection = connection;
+}
+
+const mysql = require('mysql');
+
+EventoDAO.prototype.busca = function (callback) {
+  let query = `SELECT *
+               FROM categoria
+               WHERE id_usuario = ${mysql.escape(idUsuario)}`;
+  this._connection.query(query, callback);
+};
+
+module.exports = function () {
+  return EventoDAO;
+};
+
+
 module.exports = {
 
   buscaEventos(){

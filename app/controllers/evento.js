@@ -1,13 +1,21 @@
+// Import Logger
+const logger = require('../../config/util/logger.js');
+
 module.exports = {
 
   buscaEventos(app, req, res) {
 
-    try {
-      const eventos = app.app.model.evento.buscaEventos();
-      res.status(200).send('Lista Enventos por cidade');
-    }catch (e) {
-      res.status(500).send('erro');
-    }
+    const connection = app.app.persistencia.connectionFactory();
+    const eventoDAO = new app.app.persistencia.EventoDAO(connection);
+
+    eventoDAO.busca(function (erro, resultado){
+      if (erro){
+        logger.info('Erro ao Buscar Eventos: ' + erro);
+        res.status(500).send(erro);
+        return;
+      }
+      res.status(201).json(resultado);
+    });
 
   },
 
