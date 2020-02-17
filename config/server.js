@@ -4,12 +4,16 @@ const consign = require('consign'); // Auto load
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 const cors = require('cors');
+const helmet = require('helmet');
 
 // Iniciando express na var app
 const app = express();
 
 // Cors
 app.use(cors());
+
+// Helmet
+app.use(helmet());
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
