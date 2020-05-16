@@ -2,7 +2,6 @@
 const express = require('express');
 const consign = require('consign'); // Auto load
 const bodyParser = require('body-parser');
-const expressValidator = require('express-validator');
 const cors = require('cors');
 const helmet = require('helmet');
 
@@ -21,8 +20,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
-// validando campos
-app.use(expressValidator());
+app.use(express.static('./app/public'));
+
+app.set('views', './app/view');
+app.set('view engine', 'ejs');
 
 // Definindo arquivos staticos
 app.use(express.static('./app/public'));
@@ -30,7 +31,6 @@ app.use(express.static('./app/public'));
 // Definindo auto-load do Consign (inject no app)
 consign()
   .include('./app/routes')
-  .then('./app/persistencia')
   .then('./app/controllers')
   .into(app);
 
