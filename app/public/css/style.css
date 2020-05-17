@@ -25,7 +25,7 @@ html {
   width: 50%;
 }
 
-img {
+#img_circular {
   width: 300px;
   height: 300px;
 }
@@ -33,3 +33,23 @@ img {
 #img_circular {
   border-radius: 300px
 }
+
+.session___main___titulo{
+  margin-left: 60px;
+  /*text-align: center;*/
+}
+
+.session___main___apoiadores___div{
+  margin-left: 60px;
+}
+
+.session___main___apoiadores{
+  display: inline-block;
+}
+
+.session___main___img____apoiarores{
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+}
+
