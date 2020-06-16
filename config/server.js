@@ -36,30 +36,28 @@ app.use(bodyParser.json({limit: 1.5*1024*1024}));
 
 // Routes
 const rotaHome = require('../routes/index');
-
+const rotaUsuario = require('../routes/usuario');
 
 app.use('/index', rotaHome);
-
+app.use('/usuario', rotaUsuario);
 
 // 404
-// app.use((req,res,next) => {
-//   const err = new Error("Not Found");
-//   err.status = 404;
-//   next(err);
-// });
+app.use((req,res,next) => {
+  const err = new Error("Not Found");
+  err.status = 404;
+  next(err);
+});
 
 // // Tratamento de Erro
-// app.use((err, req, res, next) => {
-//   res.status(err.status || 500);
-//   if (err.status !== 404) console.warn("Error: ", err.message, new Date());
-//   res.json({errors: {message: err.message, status: err.status}});
-// });
+app.use((err, req, res, next) => {
+  res.status(err.status || 500);
+  if (err.status !== 404) console.warn("Error: ", err.message, new Date());
+  res.json({errors: {message: err.message, status: err.status}});
+});
 
 // Definindo auto-load do Consign (inject no app)
 consign()
   .include('./repository')
-  .then('./controllers')
-  .then('./routes')
   .into(app);
 
 // Exportando var app
