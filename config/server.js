@@ -56,9 +56,9 @@ app.use((err, req, res, next) => {
 });
 
 // Definindo auto-load do Consign (inject no app)
-consign()
-  .include('./repository')
-  .into(app);
+// consign()
+//   .include('./repository')
+//   .into(app);
 
 // Exportando var app
 module.exports = app;
