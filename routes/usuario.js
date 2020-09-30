@@ -1,25 +1,17 @@
-module.exports = function (app) {
+const router = require('express').Router();
+const {body} = require('express-validator');
 
-  // const verifyJWT = require('../../infra/jwt').verifyJWT;
+const UsuarioController = require('../controllers/UsuarioController');
 
-  app.get('/api/usuario/v1/usuario', (req, res) => {
-    app.app.controllers.usuario.index(app, req, res);
-  });
+router.post('/v1/login', [
+  body('email', 'Email obrigatorio').notEmpty().isEmail(),
+  body('senha', 'Senha obrigatorio, minimo 6 caracteres').notEmpty().isString().isLength({min: 6}),
+], UsuarioController.login);
+router.post('/v1/cadastro',
+  [
+    body('nome', 'Nome obrigatorio').notEmpty().isString(),
+    body('email', 'Email obrigatorio').notEmpty().isEmail(),
+    body('senha', 'Senha obrigatorio, minimo 6 caracteres').notEmpty().isString().isLength({min: 6})
+  ], UsuarioController.create);
 
-  // app.post('/api/categoria/v1/cadastro', verifyJWT, (req, res, next) => {
-  //   app.app.controllers.categoria.cadastro(app, req, res, next);
-  // });
-  //
-  // app.put('/api/categoria/v1/atualiza', verifyJWT, (req, res, next) => {
-  //   app.app.controllers.categoria.atualiza(app, req, res, next);
-  // });
-  //
-  // app.delete('/api/categoria/v1/deleta', verifyJWT, (req, res, next) => {
-  //   app.app.controllers.categoria.deleta(app, req, res, next);
-  // });
-  //
-  // app.get('/api/categoria/v1/valor-disponivel', verifyJWT, (req, res, next) => {
-  //   app.app.controllers.categoria.buscaValorDisponivelPorCategoria(app, req, res, next);
-  // });
-
-};
+module.exports = router;
