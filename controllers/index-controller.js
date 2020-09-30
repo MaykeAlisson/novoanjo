@@ -1,4 +1,4 @@
-// const app = require('./config/server');
+// const app = require('./infra/server');
 
 exports.index = (req, res, next) => {
 

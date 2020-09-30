@@ -1,4 +1,4 @@
-// const logger = require('../config/util/logger');
+// const logger = require('../infra/util/logger');
 // const bcrypt = require('bcryptjs');
 //
 // module.exports = {

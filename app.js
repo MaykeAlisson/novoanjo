@@ -1,5 +1,5 @@
 //  Importando server.js
-const app = require('./config/server');
+const app = require('./infra/server');
 const port = process.env.PORT || 3000;
 
 // Config servidor

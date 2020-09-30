@@ -1,14 +1,10 @@
-module.exports = {
+module.exports = function(req, res, next){
 
-  decodeJWT(token){
-
-  },
-
-  verifyJWT(req, res, next){
+  // verifyJWT(req, res, next){
     const jwt = require('jsonwebtoken');
 
     if (!req.headers.authorization)
-      return res.status(401).send({ auth: false, message: 'Necessario realizar login.' });
+      return res.status(401).send({ auth: false, message: 'Necessario informar Token.' });
 
     const token = req.headers.authorization.substring(7);
 
@@ -21,14 +17,10 @@ module.exports = {
       // se tudo estiver ok, salva no request para uso posterior
       req.userId = decoded.usuario.id;
       req.userNome = decoded.usuario.nome;
-      req.userPerfil = decoded.usuario.perfil;
+      // req.userPro = decoded.usuario.pro;
 
       next();
     });
-  },
-
-  createJWT(){
-
-  }
+  // }
 
 };

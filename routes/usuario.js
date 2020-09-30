@@ -1,6 +1,6 @@
 module.exports = function (app) {
 
-  // const verifyJWT = require('../../config/jwt').verifyJWT;
+  // const verifyJWT = require('../../infra/jwt').verifyJWT;
 
   app.get('/api/usuario/v1/usuario', (req, res) => {
     app.app.controllers.usuario.index(app, req, res);
