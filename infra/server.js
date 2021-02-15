@@ -19,7 +19,6 @@ app.use(bodyParser.urlencoded({extended: false, limit: 1.5*1024*1024}));
 app.use(bodyParser.json({limit: 1.5*1024*1024}));
 
 // Routes
-
 const rotaUsuario = require('../routes/usuario');
 
 app.use('/api/usuario', rotaUsuario);
