@@ -29,5 +29,5 @@ O sistema contara com um capo de mensagem para que anjos e usuários recebe info
 
 ## Definições Técnicas
 
-O sistema sera desenvolvido no padrão  API RESTful em Node Js. 
+O sistema sera desenvolvido no padrão  API RESTful em Java. 
 
