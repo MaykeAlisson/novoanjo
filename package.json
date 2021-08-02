@@ -18,6 +18,21 @@
   },
   "homepage": "https://github.com/MaykeAlisson/novoanjo#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "helmet": "^4.6.0",
+    "jest": "^27.0.6",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.95.9",
+    "mysql2": "^2.2.5",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.2.6",
+    "nodemon": "^2.0.12"
   }
 }
