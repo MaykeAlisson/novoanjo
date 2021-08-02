@@ -1,0 +1,23 @@
+{
+  "name": "novoanjo",
+  "version": "1.0.0",
+  "description": "sistema solidario",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --env node",
+    "start": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaykeAlisson/novoanjo.git"
+  },
+  "author": "Mayke Alisson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaykeAlisson/novoanjo/issues"
+  },
+  "homepage": "https://github.com/MaykeAlisson/novoanjo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
