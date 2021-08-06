@@ -5,13 +5,18 @@ if (!fs.existsSync('logs')){
     fs.mkdirSync('logs');
 }
 
-module.exports = new winston.Logger({
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.json(),
+    defaultMeta: { service: 'user-service' },
     transports: [
         new winston.transports.File({
-            level: 'info',
             filename: 'logs/novoAnjo.log',
+            level: 'error',
             maxsize: 102400, //100MB
             maxFiles: 10
-        })
-    ]
+        }),
+    ],
 });
+
+module.exports = logger;
