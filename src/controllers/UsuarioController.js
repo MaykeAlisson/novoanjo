@@ -31,6 +31,16 @@ class UsuarioController {
 
     async create(req, res) {
 
+        // todo usuario e anjo no incio
+
+    };
+
+    async delete(req, res) {
+
+    };
+
+    async update(req, res) {
+
     }
 }
 

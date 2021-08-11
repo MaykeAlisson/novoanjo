@@ -22,8 +22,8 @@ const rotaInstituicao = require('./routes/instituicao');
 const rotaEvento = require('./routes/evento');
 
 app.use('/api/usuario', rotaUsuario);
-// app.use('/api/instituicao', rotaInstituicao);
-// app.use('/api/evento', rotaEvento);
+app.use('/api/instituicao', rotaInstituicao);
+app.use('/api/evento', rotaEvento);
 
 // 404
 app.use((req,res,next) => {
