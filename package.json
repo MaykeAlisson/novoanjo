@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "jest --env node",
-    "start": "nodemon app"
+    "start": "nodemon app",
+    "swagger-autogen": "node swagger.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,8 @@
     "knex": "^0.95.9",
     "morgan": "^1.10.0",
     "mysql2": "^2.2.5",
+    "swagger-autogen": "^2.11.2",
+    "swagger-ui-express": "^4.1.6",
     "winston": "^3.3.3"
   },
   "devDependencies": {

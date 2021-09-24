@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require("morgan");
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('../swagger_output.json')
 
 const app = express();
 
@@ -15,6 +17,8 @@ app.disable('x-powered-by');
 
 app.use(bodyParser.urlencoded({extended: false, limit: 1.5*1024*1024}));
 app.use(bodyParser.json({limit: 1.5*1024*1024}));
+
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 // Routes
 const rotaUsuario = require('./routes/usuario');
