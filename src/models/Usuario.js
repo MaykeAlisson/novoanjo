@@ -3,8 +3,13 @@ const knex = require('../database/connection');
 class Usuario {
 
     async save(usuario) {
-        return knex('usuario').insert({...usuario});
+        let result = await knex('usuario').insert({...usuario});
+        return result;
     };
+
+    async login(email) {
+        return knex('usuario').select('id_usuario', 'nome', 'email', 'senha', 'perfil').where({email: email});
+    }
 
     async findById(id){};
 

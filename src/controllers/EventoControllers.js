@@ -17,7 +17,7 @@ class EventoControllers {
             const errors = validationResult(req);
 
             if (isNotEmpty(errors.errors)) {
-                return res.status(400).json({ errors: errors.array() });
+                return res.status(400).json({ errors: errors.array({ onlyFirstError: true }) });
             }
 
             return res.status(200).json({ response: "deu certo"})
