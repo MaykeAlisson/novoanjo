@@ -15,10 +15,8 @@ if(!isProduction) app.use(morgan("dev"));
 app.use(helmet());
 app.disable('x-powered-by');
 
-app.use(bodyParser.urlencoded({extended: false, limit: 1.5*1024*1024}));
+app.use(bodyParser.urlencoded({extended: true, limit: 1.5*1024*1024}));
 app.use(bodyParser.json({limit: 1.5*1024*1024}));
-
-app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 // Routes
 const rotaUsuario = require('./routes/usuario');
@@ -28,6 +26,7 @@ const rotaEvento = require('./routes/evento');
 app.use('/api/usuario', rotaUsuario);
 app.use('/api/instituicao', rotaInstituicao);
 app.use('/api/evento', rotaEvento);
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 // 404
 app.use((req,res,next) => {
@@ -42,6 +41,5 @@ app.use((err, req, res, next) => {
     if (err.status !== 404) console.warn("Error: ", err.message, new Date());
     res.json({errors: {message: err.message, status: err.status}});
 });
-
 
 module.exports = app;

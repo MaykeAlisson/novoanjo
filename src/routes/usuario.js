@@ -4,7 +4,6 @@ const Auth = require('../middleware/Auth');
 
 const UsuarioController = require('../controllers/UsuarioController');
 
-
 router.post('/v1/login', [
     body('email', 'Email obrigatorio').notEmpty().isEmail(),
     body('senha', 'Senha obrigatorio, minimo 6 caracteres').notEmpty().isString().isLength({min: 6}),
@@ -19,7 +18,7 @@ router.post('/v1/cadastro',
         body('senha', 'Senha obrigatorio, minimo 6 caracteres').notEmpty().isString().isLength({min: 6})
     ], UsuarioController.create);
 
-router.delete('/v1/delete/:id', Auth, UsuarioController.delete);
+router.delete('/v1/delete/:id', Auth, UsuarioController.deleteRegistro);
 
 router.put('/v1/update/:id',
     [

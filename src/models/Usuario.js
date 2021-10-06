@@ -18,9 +18,13 @@ class Usuario {
         return result.length > 0;
     };
 
-    async update(id, usuario){};
+    async update(id, usuario){
 
-    async deleteById(id){};
+    };
+
+    async deleteById(id){
+        return knex('usuario').delete().where({id_usuario: id})
+    };
 
 }
 
