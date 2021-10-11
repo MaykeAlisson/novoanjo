@@ -13,58 +13,6 @@ const isEmpty = require("../util/isEmpty");
 
 class UsuarioController {
 
-    async login(req, res) {
-
-        try {
-            const errors = validationResult(req);
-
-            if (isNotEmpty(errors.errors)) {
-                return res.status(400).json({ errors: errors.array({ onlyFirstError: true }) });
-            }
-
-            let {email, senha} = req.body;
-
-            let resultado = await User.login(email);
-
-            if (isEmpty(resultado)){
-                res.status(400).send('Email não cadastrado');
-                return ;
-            }
-
-            let verificaSenha = await bcrypt.compare(senha,resultado[0].senha);
-
-            if (!verificaSenha){
-                res.status(400).json({
-                    success: false,
-                    message: 'Autenticação do Usuário falhou. E-mail ou Senha incorreta!'
-                });
-                return;
-            }
-
-            let usuario = {
-                "id": resultado[0].id_usuario,
-                "perfil": resultado[0].perfil,
-                "nome": resultado[0].nome,
-            };
-
-            const token = Jwt.create(usuario)
-
-            const response = {
-                "idUser": usuario.id,
-                "userName": usuario.nome,
-                "perfil": usuario.perfil,
-                "token": token
-            };
-
-            return res.status(200).json(response);
-
-        } catch (e) {
-            logger.info('UsuarioController : Login ' + e);
-            res.status(500).json({error: e})
-        }
-
-    };
-
     async create(req, res) {
 
         try {
@@ -109,6 +57,58 @@ class UsuarioController {
             };
 
             return res.status(201).json(response);
+
+        } catch (e) {
+            logger.info('UsuarioController : Login ' + e);
+            res.status(500).json({error: e})
+        }
+
+    };
+
+    async login(req, res) {
+
+        try {
+            const errors = validationResult(req);
+
+            if (isNotEmpty(errors.errors)) {
+                return res.status(400).json({ errors: errors.array({ onlyFirstError: true }) });
+            }
+
+            let {email, senha} = req.body;
+
+            let resultado = await User.login(email);
+
+            if (isEmpty(resultado)){
+                res.status(400).send('Email não cadastrado');
+                return ;
+            }
+
+            let verificaSenha = await bcrypt.compare(senha,resultado[0].senha);
+
+            if (!verificaSenha){
+                res.status(400).json({
+                    success: false,
+                    message: 'Autenticação do Usuário falhou. E-mail ou Senha incorreta!'
+                });
+                return;
+            }
+
+            let usuario = {
+                "id": resultado[0].id_usuario,
+                "perfil": resultado[0].perfil,
+                "nome": resultado[0].nome,
+            };
+
+            const token = Jwt.create(usuario)
+
+            const response = {
+                "idUser": usuario.id,
+                "userName": usuario.nome,
+                "perfil": usuario.perfil,
+                "token": token
+            };
+
+            return res.status(200).json(response);
 
         } catch (e) {
             logger.info('UsuarioController : Login ' + e);

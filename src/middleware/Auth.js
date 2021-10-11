@@ -15,9 +15,9 @@ module.exports = function(req, res, next) {
         if (err) return res.status(401).send({auth: false, message: 'Token Invalido.'});
 
         // se tudo estiver ok, salva no request para uso posterior
-        req.userId = decoded.usuario.id;
-        req.userPerfil = decoded.usuario.perfil;
-        req.userNome = decoded.usuario.nome;
+        req.userId = decoded.payload.id;
+        req.userPerfil = decoded.payload.perfil;
+        req.userNome = decoded.payload.nome;
 
         next();
     });
