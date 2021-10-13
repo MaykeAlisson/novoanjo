@@ -118,24 +118,25 @@ class UsuarioController {
     };
 
     async deleteRegistro(req, res) {
-        console.log("entrei no metodo")
 
         try {
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
                 return res.status(400).json({errors: errors.array({ onlyFirstError: true })});
             }
-            console.log(req.params)
-            let id = req.params.id;
-            if (!Number.isInteger(Number(id)) || !id === req.userId) {
-                res.status(204).send('');
-                return;
+
+            if (!Number.isInteger(Number(req.params.id))) {
+                return res.status(204).send('');
+            }
+            let id = Number(req.params.id);
+
+            if (id !== req.userId) {
+                return res.status(204).send('');
             }
 
-            let resultado = await User.deleteById(id);
-            console.log(resultado)
+            await User.deleteById(id);
 
-            return res.status(200).json('deu certo');
+            return res.status(200).json();
 
         }catch (e) {
             logger.info('UsuarioController : Delete ' + e);

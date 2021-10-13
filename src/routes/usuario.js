@@ -22,9 +22,8 @@ router.delete('/v1/delete/:id', Auth, UsuarioController.deleteRegistro);
 
 router.put('/v1/update/:id',
     [
-        body('nome', 'Nome obrigatorio').isString(),
-        body('email', 'Email obrigatorio').isEmail(),
-        body('senha', 'Senha obrigatorio, minimo 6 caracteres').isString().isLength({min: 6})
+        body('email-atual', 'Email obrigatorio').isEmail(),
+        body('novo-email', 'Email obrigatorio').isEmail()
     ], Auth, UsuarioController.update);
 
 module.exports = router;
