@@ -16,5 +16,13 @@ dispostas a ajudar, seja com mantimentos ou doando seu tempo.
 
 ## Definições Técnicas
 
-O sistema sera desenvolvido no padrão  API RESTful em NodeJs. 
+O sistema sera desenvolvido no padrão  API RESTful em NodeJs.
+
+## Criar IMG Docker
+
+```
+docker build -f Dockerfile -t mayke/novo-anjo .
+```
+
+
 
